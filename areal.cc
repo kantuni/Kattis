@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  int a;
+  unsigned long long a;
   cin >> a;
   printf("%.7f\n", 4 * sqrt(a));
   return 0;
