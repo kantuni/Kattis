@@ -29,9 +29,7 @@ int main() {
       cout << s.top() << "\n";
       s.pop();
     }
-    
     sn++;
   }
-  
   return 0;
 }
