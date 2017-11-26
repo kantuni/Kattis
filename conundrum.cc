@@ -10,11 +10,9 @@ int main() {
     if (s[i] != 'P') {
       ans++;
     }
-    
     if (s[i + 1] != 'E') {
       ans++;
     }
-    
     if (s[i + 2] != 'R') {
       ans++;
     }
