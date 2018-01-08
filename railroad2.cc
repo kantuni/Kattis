@@ -1,21 +1,20 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
   int x, y;
   cin >> x >> y;
   
-  if (x == 0 && y == 0) {
-    cout << "possible\n";
-  } else if (x == 0 && y > 0) {
-    cout << (y % 2 == 0 ? "possible\n" : "impossible\n");
-  } else if (x > 0 && y == 0) {
-    cout << "possible\n";
-  } else if (y == 2 * x || y == 4 * x || 3 * y == 4 * x) {
+  vector<string> comb = {
+    "00", "02", "10", "12", "14", "24", "34"
+  };
+  
+  string xy = to_string(x) + to_string(y);
+  if (find(comb.begin(), comb.end(), xy) != comb.end()) {
     cout << "possible\n";
   } else {
     cout << "impossible\n";
   }
   
   return 0;
-}
+} 
