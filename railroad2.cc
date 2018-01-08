@@ -1,16 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
   int x, y;
   cin >> x >> y;
   
-  vector<string> comb = {
-    "00", "02", "10", "12", "14", "24", "34"
-  };
-  
-  string xy = to_string(x) + to_string(y);
-  if (find(comb.begin(), comb.end(), xy) != comb.end()) {
+  if (x == 0 && (y == 0 || y == 2)) {
+    cout << "possible\n";
+  } else if (x == 1 && (y == 0 || y == 4)) {
     cout << "possible\n";
   } else {
     cout << "impossible\n";
