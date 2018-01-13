@@ -6,28 +6,34 @@ int main() {
   cin >> p;
   
   while (p--) {
-    int k, p, q;
-    char c;
+    int k, p, q; char c;
     cin >> k >> p >> c >> q;
     
-    queue<pair<int, int> > qp;
-    qp.push(make_pair(1, 1));
-    int n = 1;
+    vector<char> path;
     
-    while (true) {
-      int x = qp.front().first;
-      int y = qp.front().second;
-      
-      if (x == p && y == q) {
-        cout << k << " " << n << "\n";
-        break;
+    while (p != 1 || q != 1) {
+      if (p > q) {
+        path.push_back('r');
+        p -= q;
+      } else {
+        path.push_back('l');
+        q -= p;
       }
-      
-      qp.push(make_pair(x, x + y));
-      qp.push(make_pair(x + y, y));
-      qp.pop();
-      n++;
     }
+    
+    reverse(path.begin(), path.end());
+    int l = 0, h = pow(2, path.size());
+    
+    for (int i = 0; i < path.size(); i++) {
+      if (path[i] == 'r') {
+        l += (h - l) / 2;
+      } else {
+        h -= (h - l) / 2;
+      }
+    }
+    
+    int answer = pow(2, path.size()) + l;
+    cout << k << " " << answer << "\n";
   }
   
   return 0;
