@@ -4,12 +4,11 @@ using namespace std;
 int main() {
   int e, f, c;
   cin >> e >> f >> c;
-  int total = 0;
-  while ((e + f) / c != 0) {
-    total += (e + f) / c;
-    e = (e + f) / c;
-    f = (e + f) % c;
+  int total = e + f, count = 0;
+  while (total >= c) {
+    total = total - c + 1;
+    count++;
   }
-  cout << total << "\n";
+  cout << count << "\n";
   return 0;
 }
