@@ -12,7 +12,6 @@ int main() {
       else end = !end;
       continue;
     }
-
     istringstream iss(line);
     if (!end) {
       string w, t;
