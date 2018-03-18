@@ -23,9 +23,7 @@ int main() {
       known.insert(sound);
     }
     for (auto sound: sounds) {
-      if (!known.count(sound)) {
-        cout << sound << " ";
-      }
+      if (!known.count(sound)) cout << sound << " ";
     }
     cout << "\n";
   }
