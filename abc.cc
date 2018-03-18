@@ -7,7 +7,6 @@ int main() {
     cin >> numbers[i];
   }
   sort(numbers.begin(), numbers.end());
-  
   string order;
   cin >> order;
   for (char l: order) {
