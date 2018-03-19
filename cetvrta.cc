@@ -13,12 +13,11 @@ int main() {
   // where x1 ≥ x2, y1 ≥ y2
   sort(coords.begin(), coords.end());
   
-  int dx, dy;
   pair<int, int> ans;
+  int dx, dy;
   if (coords[0].first == coords[1].first) {
     dx = coords[2].first - coords[0].first;
     dy = coords[1].second - coords[0].second;
-    
     if (coords[2].second == coords[0].second) {
       ans = make_pair(coords[0].first + dx, coords[0].second + dy);
     } else {
@@ -27,7 +26,6 @@ int main() {
   } else {
     dx = coords[2].first - coords[0].first;
     dy = coords[2].second - coords[1].second;
-    
     if (coords[2].second == coords[0].second) {
       ans = make_pair(coords[2].first - dx, coords[2].second - dy);
     } else {
