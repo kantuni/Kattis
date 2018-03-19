@@ -2,16 +2,16 @@
 using namespace std;
 
 int main() {
-  while (true) {
+  while (1) {
     int w, l;
     cin >> w >> l;
     if (w == 0 and l == 0) break;
     int n;
     cin >> n;
-    int rx = 0, ry = 0;
-    int ax = 0, ay = 0;
+    int rx = 0, ry = 0, ax = 0, ay = 0;
     while (n--) {
-      char d; int m;
+      char d;
+      int m;
       cin >> d >> m;
       if (d == 'u') {
         ry += m;
