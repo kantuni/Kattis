@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-  unordered_map<string, string> d;
+  unordered_map<string, string> memo;
   bool end = false;
-  while (true) {
+  while (1) {
     string line;
     getline(cin, line);
     if (line == "") {
@@ -16,12 +16,12 @@ int main() {
     if (!end) {
       string w, t;
       iss >> w >> t;
-      d[t] = w;
+      memo[t] = w;
     } else {
       string t;
       iss >> t;
-      if (!d.count(t)) cout << "eh\n";
-      else cout << d[t] << "\n";
+      if (!memo.count(t)) cout << "eh\n";
+      else cout << memo[t] << "\n";
     }
   }
   return 0;
