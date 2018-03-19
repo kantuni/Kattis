@@ -9,15 +9,14 @@ int main() {
     cin >> s;
     vector<int> red, blue;
     while (s--) {
-      int l; char c;
+      int l;
+      char c;
       cin >> l >> c;
       if (c == 'R') red.push_back(l);
       else blue.push_back(l);
     }
-    
     sort(red.rbegin(), red.rend());
     sort(blue.rbegin(), blue.rend());
-    
     int length = 0;
     for (int j = 0; j < min(red.size(), blue.size()); j++) {
       length += red[j] + blue[j] - 1;
