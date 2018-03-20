@@ -11,9 +11,8 @@ int main() {
   string line;
   getline(cin, line);
   for (char l: line) {
-    if (isalpha(l)) {
-      cout << alphabet[toupper(l) - 'A'];
-    } else cout << l;
+    if (isalpha(l)) cout << alphabet[toupper(l) - 'A'];
+    else cout << l;
   }
   cout << "\n";
   return 0;
