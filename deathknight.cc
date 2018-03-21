@@ -10,7 +10,7 @@ int main() {
     cin >> s;
     bool won = true;
     for (int i = 0; i < s.size() - 1; i++) {
-      if (s[i] == 'C' && s[i + 1] == 'D') {
+      if (s[i] == 'C' and s[i + 1] == 'D') {
         won = false;
         break;
       }
