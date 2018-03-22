@@ -4,7 +4,6 @@ using namespace std;
 int main() {
   int t;
   cin >> t;
-  
   while (t--) {
     int n;
     cin >> n;
@@ -16,6 +15,5 @@ int main() {
     }
     cout << s.size() << "\n";
   }
-  
   return 0;
 }
