@@ -3,7 +3,7 @@ using namespace std;
 
 int dsum(int n) {
   int sum = 0;
-  while (n != 0) {
+  while (n) {
     sum += n % 10;
     n /= 10;
   }
@@ -11,18 +11,12 @@ int dsum(int n) {
 }
 
 int main() {
-  while (true) {
+  while (1) {
     int n;
     cin >> n;
-    
-    if (n == 0) {
-      break;
-    }
-    
+    if (n == 0) break;
     int p = 11;
-    while (dsum(p * n) != dsum(n)) {
-      p++;
-    }
+    while (dsum(p * n) != dsum(n)) p++;
     cout << p << "\n";
   }
   return 0;
