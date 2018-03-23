@@ -77,9 +77,9 @@ int main() {
     reverse(len.begin(), len.end());
     int next = 0;
     for (char n: len) {
-      int count = n - '0';
+      int cnt = n - '0';
       string code;
-      while (count--) {
+      while (cnt--) {
         code += mc[next];
         next++;
       }
