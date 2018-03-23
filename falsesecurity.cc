@@ -34,7 +34,6 @@ int main() {
     {".", "---."},  
     {"?", "----"},  
   });
-  
   unordered_map<string, string> from_morse({
     {".-",   "A"},
     {"-...", "B"},
@@ -67,7 +66,6 @@ int main() {
     {"---.", "."},
     {"----", "?"}
   });
-  
   string c;
   while (getline(cin, c)) {
     string mc, m, len;
@@ -77,7 +75,6 @@ int main() {
       len += to_string(code.size());
     }
     reverse(len.begin(), len.end());
-    
     int next = 0;
     for (char n: len) {
       int count = n - '0';
@@ -90,6 +87,5 @@ int main() {
     }
     cout << m << "\n";
   }
-  
   return 0;
 }
