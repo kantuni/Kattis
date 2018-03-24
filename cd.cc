@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-  int n, m;
   while (1) {
     unordered_set<int> jack;
+    int n, m;
     cin >> n >> m;
     if (n == 0 and m == 0) break;
     while (n--) {
@@ -20,4 +20,5 @@ int main() {
     }
     cout << cnt << "\n";
   }
+  return 0;
 }
