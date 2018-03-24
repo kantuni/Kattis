@@ -12,7 +12,7 @@ int main() {
   vector<int> gis;
   gis.push_back(a[0]);
   for (int i = 0; i < n - 1; i++) {
-    bool ok = asub[i] > gis[gis.size() - 1]
+    bool ok = asub[i] > gis[gis.size() - 1];
     if (ok) gis.push_back(asub[i]);
   }
   cout << gis.size() << "\n";
