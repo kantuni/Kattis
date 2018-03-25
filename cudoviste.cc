@@ -8,8 +8,8 @@ int main() {
   for (int i = 0; i < r; i++) {
     for (int j = 0; j < c; j++) cin >> M[i][j];
   }
-  vector<int> dr = {0, 0, 1, 1};
-  vector<int> dc = {0, 1, 0, 1};
+  int dr[4] = {0, 0, 1, 1};
+  int dc[4] = {0, 1, 0, 1};
   vector<int> counts(5);
   for (int i = 0; i < r - 1; i++) {
     for (int j = 0; j < c - 1; j++) {
