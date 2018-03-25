@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define EPS 1e-10
-
 int main() {
   int t;
   cin >> t;
