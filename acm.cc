@@ -10,7 +10,7 @@ struct Problem {
 int main() {
   unordered_map<char, Problem> memo;
   int m; char l; string v;
-  while (1) {
+  while (true) {
     cin >> m;
     if (m == -1) break;
     cin >> l >> v;
