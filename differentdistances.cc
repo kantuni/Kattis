@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
   long double x1, y1, x2, y2, p, ans;
-  while (1) {
+  while (true) {
     cin >> x1;
     if (x1 == 0) break;
     cin >> y1 >> x2 >> y2 >> p;
