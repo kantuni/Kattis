@@ -3,3 +3,6 @@
 
 # C/C++
 *.out
+
+# Java
+*.class
