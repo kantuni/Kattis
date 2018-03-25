@@ -5,7 +5,7 @@ using namespace std;
 #define EPS 1e-11
 
 int main() {
-  while (1) {
+  while (true) {
     int D, V;
     cin >> D >> V;
     if (D == 0 and V == 0) break;
@@ -14,7 +14,7 @@ int main() {
     Vt -= V;
     double d, l, h;
     l = 0; h = D;
-    while (1) {
+    while (true) {
       d = (l + h) / 2;
       Vsm = PI * d * d * d / 4.0;
       Vc = PI * (D - d) * (D * D + D * d + d * d) / 24.0;
