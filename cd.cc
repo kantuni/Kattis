@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  while (1) {
+  while (true) {
     unordered_set<int> jack;
     int n, m;
     cin >> n >> m;
