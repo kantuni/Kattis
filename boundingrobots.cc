@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  while (1) {
+  while (true) {
     int w, l;
     cin >> w >> l;
     if (w == 0 and l == 0) break;
