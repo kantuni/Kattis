@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   unordered_map<string, string> memo;
   bool end = false;
-  while (1) {
+  while (true) {
     string line;
     getline(cin, line);
     if (line == "") {
