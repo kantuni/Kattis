@@ -8,7 +8,7 @@ int main() {
     string s;
     cin >> s;
     int m = s.size();
-    while (1) {
+    while (true) {
       int root = sqrt(m);
       if (root * root == m) break;
       s += "*";
