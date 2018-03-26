@@ -13,7 +13,7 @@ int main() {
     string sound;
     while (iss >> sound) sounds.push_back(sound);
     unordered_set<string> known;
-    while (1) {
+    while (true) {
       string line;
       getline(cin, line);
       if (line == "what does the fox say?") break;
