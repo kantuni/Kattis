@@ -9,12 +9,7 @@ int main() {
     s.insert(w);
     n++;
   }
-  
-  if (s.size() == n) {
-    cout << "yes\n";
-  } else {
-    cout << "no\n";
-  }
-  
+  if (s.size() == n) cout << "yes\n";
+  else cout << "no\n";
   return 0;
 }
