@@ -5,12 +5,7 @@ int main() {
   int wcnt = 0, aecnt = 0;
   string w;
   while (cin >> w) {
-    for (int i = 0; i < w.size() - 1; i++) {
-      if (w[i] == 'a' and w[i + 1] == 'e') {
-        aecnt++;
-        break;
-      }
-    }
+    if (w.find("ae") != string::npos) aecnt++;
     wcnt++;
   }
   double p = 1.0 * aecnt / wcnt;
