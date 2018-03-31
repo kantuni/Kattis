@@ -10,13 +10,11 @@ int main() {
       cin >> p;
       sum += p;
     }
-    
     if (sum > max) {
       imax = i;
       max = sum;
     }
   }
-  
   cout << imax + 1 << " " << max << "\n";
   return 0;
 }
