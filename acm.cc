@@ -12,10 +12,14 @@ int main() {
   int m; char l; string v;
   while (true) {
     cin >> m;
-    if (m == -1) break;
+    if (m == -1) {
+      break;
+    }
     cin >> l >> v;
     Problem p;
-    if (memo.count(l)) p = memo[l];
+    if (memo.count(l)) {
+      p = memo[l];
+    }
     if (v == "right") {
       p.m = m;
       p.v = true;
