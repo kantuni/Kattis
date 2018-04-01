@@ -9,7 +9,6 @@ int main() {
     string s;
     getline(cin, s);
     transform(s.begin(), s.end(), s.begin(), ::tolower);
-    
     vector<int> alphabet(26, 0);
     int counter = 0;
     for (int i = 0; i < s.size(); i++) {
@@ -18,15 +17,11 @@ int main() {
         counter++;
       }
     }
-    
-    if (counter == 26) {
-      cout << "pangram\n";
-    } else {
+    if (counter == 26) cout << "pangram\n";
+    else {
       cout << "missing ";
       for (int i = 0; i < alphabet.size(); i++) {
-        if (alphabet[i] == 0) {
-          cout << (char) (i + 'a');
-        }
+        if (alphabet[i] == 0) cout << (char) (i + 'a');
       }
       cout << "\n";
     }
