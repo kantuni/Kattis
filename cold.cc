@@ -8,7 +8,9 @@ int main() {
   while (n--) {
     int temp;
     cin >> temp;
-    if (temp < 0) ans++;
+    if (temp < 0) {
+      ans++;
+    }
   }
   cout << ans << "\n";
   return 0;
