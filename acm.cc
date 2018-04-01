@@ -9,12 +9,14 @@ struct Problem {
 
 int main() {
   unordered_map<char, Problem> memo;
-  int m; char l; string v;
   while (true) {
+    int m;
     cin >> m;
     if (m == -1) {
       break;
     }
+    char l;
+    string v;
     cin >> l >> v;
     Problem p;
     if (memo.count(l)) {
