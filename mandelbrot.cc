@@ -5,10 +5,11 @@ int main() {
   int t = 1;
   string line;
   while (getline(cin, line)) {
-    pair<double, double> z = {0.0, 0.0}, c;
+    pair<double, double> c;
     int r;
     istringstream iss(line);
     iss >> c.first >> c.second >> r;
+    pair<double, double> z = {0.0, 0.0};
     bool in = true;
     while (r--) {
       z = make_pair(
