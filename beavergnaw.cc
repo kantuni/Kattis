@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
   const double PI = acos(-1.0);
-  const double EPS = 1e-10;
+  const double EPS = 1e-9;
   while (true) {
     int D, V;
     cin >> D >> V;
@@ -14,7 +14,7 @@ int main() {
     Vt = PI * D * D * D / 4.0;
     Vt -= V;
     double Vsm, Vc, Vl;
-    double d, l = 0, h = D;
+    double l = 0, h = D, d;
     while (true) {
       d = (l + h) / 2;
       Vsm = PI * d * d * d / 4.0;
@@ -28,7 +28,8 @@ int main() {
         h = d;
       }
     }
-    printf("%.9f\n", d);
+    cout << fixed << setprecision(9);
+    cout << d << "\n";
   }
   return 0;
 }
