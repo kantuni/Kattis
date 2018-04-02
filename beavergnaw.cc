@@ -2,7 +2,8 @@
 using namespace std;
 
 int main() {
-  double EPS = 1e-10;
+  const double PI = acos(-1.0);
+  const double EPS = 1e-10;
   while (true) {
     int D, V;
     cin >> D >> V;
@@ -10,14 +11,14 @@ int main() {
       break;
     }
     double Vt;
-    Vt = acos(-1.0) * D * D * D / 4.0;
+    Vt = PI * D * D * D / 4.0;
     Vt -= V;
     double Vsm, Vc, Vl;
     double d, l = 0, h = D;
     while (true) {
       d = (l + h) / 2;
-      Vsm = acos(-1.0) * d * d * d / 4.0;
-      Vc = acos(-1.0) * (D - d) * (D * D + D * d + d * d) / 24.0;
+      Vsm = PI * d * d * d / 4.0;
+      Vc = PI * (D - d) * (D * D + D * d + d * d) / 24.0;
       Vl = Vsm + 2 * Vc;
       if (abs(Vt - Vl) < EPS) {
         break;
