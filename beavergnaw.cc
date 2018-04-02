@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  double EPS = 1e-11;
+  double EPS = 1e-10;
   while (true) {
     int D, V;
     cin >> D >> V;
