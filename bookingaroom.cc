@@ -18,6 +18,8 @@ int main() {
       break;
     }
   }
-  if (!empty) cout << "too late\n"; 
+  if (!empty) {
+    cout << "too late\n";
+  }
   return 0;
 }
