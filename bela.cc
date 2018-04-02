@@ -20,8 +20,11 @@ int main() {
   while (n--) {
     char num, suit;
     cin >> num >> suit;
-    if (suit == b) ans += d[num];
-    else ans += nd[num];
+    if (suit == b) {
+      ans += d[num];
+    } else {
+      ans += nd[num];
+    }
   }
   cout << ans << "\n";
   return 0;
