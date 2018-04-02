@@ -8,8 +8,11 @@ int main() {
     string line;
     getline(cin, line);
     if (line == "") {
-      if (end) break;
-      else end = !end;
+      if (end) {
+        break;
+      } else {
+        end = !end;
+      }
       continue;
     }
     istringstream iss(line);
@@ -20,8 +23,11 @@ int main() {
     } else {
       string t;
       iss >> t;
-      if (!memo.count(t)) cout << "eh\n";
-      else cout << memo[t] << "\n";
+      if (!memo.count(t)) {
+        cout << "eh\n";
+      } else {
+        cout << memo[t] << "\n";
+      }
     }
   }
   return 0;
