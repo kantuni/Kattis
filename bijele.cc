@@ -7,7 +7,9 @@ int main() {
     int n;
     cin >> n;
     cout << correct[i] - n;
-    if (i != 6) cout << " ";
+    if (i != 6) {
+      cout << " ";
+    }
   }
   cout << "\n";
   return 0;
