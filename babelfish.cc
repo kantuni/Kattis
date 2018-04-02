@@ -12,8 +12,8 @@ int main() {
         break;
       } else {
         end = !end;
-        continue;
       }
+      continue;
     }
     istringstream iss(line);
     if (!end) {
