@@ -5,7 +5,9 @@ int main() {
   while (true) {
     int w, l;
     cin >> w >> l;
-    if (w == 0 and l == 0) break;
+    if (w == 0 and l == 0) {
+      break;
+    }
     int n;
     cin >> n;
     int rx = 0, ry = 0, ax = 0, ay = 0;
