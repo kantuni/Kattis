@@ -8,9 +8,9 @@ int main() {
   for (char c: s) {
     if (c == '_') {
       w++;
-    } else if (c >= 'a' && c <= 'z') {
+    } else if (c >= 'a' and c <= 'z') {
       lc++;
-    } else if (c >= 'A' && c <= 'Z') {
+    } else if (c >= 'A' and c <= 'Z') {
       uc++;
     } else {
       sym++;
