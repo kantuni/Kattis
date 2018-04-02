@@ -2,20 +2,20 @@
 using namespace std;
 
 int main() {
-  vector<int> numbers(3);
-  for (int i = 0; i < numbers.size(); i++) {
-    cin >> numbers[i];
+  vector<int> nums(3);
+  for (int i = 0; i < nums.size(); i++) {
+    cin >> nums[i];
   }
-  sort(numbers.begin(), numbers.end());
+  sort(nums.begin(), nums.end());
   string order;
   cin >> order;
   for (char l: order) {
     if (l == 'A') {
-      cout << numbers[0] << " ";
+      cout << nums[0] << " ";
     } else if (l == 'B') {
-      cout << numbers[1] << " ";
+      cout << nums[1] << " ";
     } else {
-      cout << numbers[2] << " ";
+      cout << nums[2] << " ";
     }
   }
   cout << "\n";
