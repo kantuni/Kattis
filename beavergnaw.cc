@@ -27,8 +27,7 @@ int main() {
         h = d;
       }
     }
-    cout << fixed << setprecision(9);
-    cout << d << "\n";
+    printf("%.9f\n", d);
   }
   return 0;
 }
