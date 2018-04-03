@@ -16,8 +16,7 @@ int main() {
       s += "*";
       m++;
     }
-    int r, c;
-    r = c = sqrt(m);
+    int r = sqrt(m), c = sqrt(m);
     vector<vector<char> > table(r, vector<char>(c));
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
