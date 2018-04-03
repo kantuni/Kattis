@@ -6,7 +6,9 @@ int main() {
     unordered_set<int> jack;
     int n, m;
     cin >> n >> m;
-    if (n == 0 and m == 0) break;
+    if (n == 0 and m == 0) {
+      break;
+    }
     while (n--) {
       int cn;
       cin >> cn;
@@ -16,7 +18,9 @@ int main() {
     while (m--) {
       int cn;
       cin >> cn;
-      if (jack.count(cn)) cnt++;
+      if (jack.count(cn)) {
+        cnt++;
+      }
     }
     cout << cnt << "\n";
   }
