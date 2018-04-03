@@ -10,19 +10,26 @@ int main() {
     int m = s.size();
     while (true) {
       int root = sqrt(m);
-      if (root * root == m) break;
+      if (root * root == m) {
+        break;
+      }
       s += "*";
       m++;
     }
-    int r = sqrt(m), c = sqrt(m);
+    int r, c;
+    r = c = sqrt(m);
     vector<vector<char> > table(r, vector<char>(c));
     for (int i = 0; i < r; i++) {
-      for (int j = 0; j < c; j++) table[i][j] = s[i * r + j];
+      for (int j = 0; j < c; j++) {
+        table[i][j] = s[i * r + j];
+      }
     }
     string sm = "";
     for (int j = 0; j < c; j++) {
       for (int i = r - 1; i >= 0; i--) {
-        if (table[i][j] != '*') sm += table[i][j];
+        if (table[i][j] != '*') {
+          sm += table[i][j];
+        }
       }
     }
     cout << sm << "\n";
