@@ -14,12 +14,14 @@ int main() {
   memo["G#"] = "Ab";
   memo["Ab"] = "G#";
   string note, tonality;
-  int c = 1;
+  int t = 1;
   while (cin >> note >> tonality) {
-    cout << "Case " << c++ << ": ";
+    cout << "Case " << t++ << ": ";
     if (memo.count(note) > 0) {
       cout << memo[note] << " " << tonality << "\n";
-    } else cout << "UNIQUE\n";
+    } else {
+      cout << "UNIQUE\n";
+    }
   }
   return 0;
 }
