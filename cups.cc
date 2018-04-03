@@ -16,6 +16,8 @@ int main() {
       cups[r] = s1; 
     }
   }
-  for (auto c: cups) cout << c.second << "\n";
+  for (auto c: cups) {
+    cout << c.second << "\n";
+  }
   return 0;
 }
