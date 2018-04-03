@@ -6,7 +6,9 @@ int main() {
   cin >> r >> c;
   vector<vector<char> > M(r, vector<char>(c));
   for (int i = 0; i < r; i++) {
-    for (int j = 0; j < c; j++) cin >> M[i][j];
+    for (int j = 0; j < c; j++) {
+      cin >> M[i][j];
+    }
   }
   int dr[4] = {0, 0, 1, 1};
   int dc[4] = {0, 1, 0, 1};
@@ -19,11 +21,17 @@ int main() {
           count = -1;
           break;
         }
-        if (M[i + dr[k]][j + dc[k]] == 'X') count++;
+        if (M[i + dr[k]][j + dc[k]] == 'X') {
+          count++;
+        }
       }
-      if (count != -1) counts[count]++;
+      if (count != -1) {
+        counts[count]++;
+      }
     }
   }
-  for (auto c: counts) cout << c << "\n";
+  for (auto c: counts) {
+    cout << c << "\n";
+  }
   return 0;
 }
