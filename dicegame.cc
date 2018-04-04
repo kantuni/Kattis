@@ -10,13 +10,16 @@ int main() {
   int gmax = b1 + b2;
   int emin = a3 + a4;
   int emax = b3 + b4;
-  if (gmin > emax) cout << "Gunnar\n";
-  else if (emin > gmax) cout << "Emma\n";
-  else {
+  if (gmin > emax) {
+    cout << "Gunnar\n";
+  } else if (emin > gmax) {
+    cout << "Emma\n";
+  } else {
     int l = max(gmin, emin) - min(gmin, emin);
     int r = max(gmax, emax) - min(gmax, emax);
-    if (r == l) cout << "Tie\n";
-    else if (r > l) {
+    if (r == l) {
+      cout << "Tie\n";
+    } else if (r > l) {
       cout << (max(gmax, emax) == gmax ? "Gunnar\n" : "Emma\n");
     } else {
       cout << (min(gmin, emin) == gmin ? "Emma\n" : "Gunnar\n");
