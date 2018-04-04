@@ -15,7 +15,9 @@ int main() {
         break;
       }
     }
-    if (won) ans++;
+    if (won) {
+      ans++;
+    }
   }
   cout << ans << "\n";
   return 0;
