@@ -2,8 +2,6 @@
 using namespace std;
 
 int main() {
-  int d, m;
-  cin >> d >> m;
   vector<int> dinm = {
     31, 28, 31, 
     30, 31, 30, 
@@ -14,6 +12,8 @@ int main() {
     "Monday", "Tuesday", "Wednesday", 
     "Thursday", "Friday", "Saturday", "Sunday"
   };
+  int d, m;
+  cin >> d >> m;
   vector<vector<int> > calendar(12);
   int start = 3; // 1.1.2009 = Thursday
   for (int i = 0; i < dinm.size(); i++) {
