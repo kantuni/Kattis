@@ -10,6 +10,10 @@ int main() {
     31, 31, 30, 
     31, 30, 31
   };
+  vector<string> dofw = {
+    "Monday", "Tuesday", "Wednesday", 
+    "Thursday", "Friday", "Saturday", "Sunday"
+  };
   vector<vector<int> > calendar(12);
   int start = 3; // 1.1.2009 = Thursday
   for (int i = 0; i < dinm.size(); i++) {
@@ -20,10 +24,6 @@ int main() {
     }
     start = (calendar[i][dinm[i] - 1] + 1) % 7;
   }
-  vector<string> dofw = {
-    "Monday", "Tuesday", "Wednesday", 
-    "Thursday", "Friday", "Saturday", "Sunday"
-  };
   cout << dofw[calendar[m - 1][d - 1]] << "\n";
   return 0;
 }
