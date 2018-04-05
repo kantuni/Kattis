@@ -19,7 +19,7 @@ int main() {
       m += " ";
     }
     cout << "'";
-    for (int i = 0; i < m.size() - n + 1; i += n) {
+    for (int i = 0; m.size() and i < m.size() - n + 1; i += n) {
       for (int j = 0; j < n; j++) {
         cout << m[i + perm[j] - 1];
       }
