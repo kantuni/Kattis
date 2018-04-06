@@ -14,9 +14,13 @@ int main() {
   while (true) {
     int n;
     cin >> n;
-    if (n == 0) break;
+    if (n == 0) {
+      break;
+    }
     int p = 11;
-    while (dsum(p * n) != dsum(n)) p++;
+    while (dsum(p * n) != dsum(n)) {
+      p++;
+    }
     cout << p << "\n";
   }
   return 0;
