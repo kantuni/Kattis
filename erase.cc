@@ -6,7 +6,7 @@ int main() {
   cin >> n;
   string before, after;
   cin >> before >> after;
-  if (n % 2 == 1) {
+  if (n % 2) {
     for (char &bit: after) {
       bit = (bit == '0') ? '1' : '0';
     }
