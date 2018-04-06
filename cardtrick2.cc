@@ -7,11 +7,11 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    queue<pair<int, int> > q;
+    queue<pair<int, int>> q;
     for (int i = 0; i < n; i++) {
       q.push(make_pair(i, -1));
     }
-    vector<pair<int, int> > perm(n);
+    vector<pair<int, int>> perm(n);
     for (int i = 1; i <= n; i++) {
       for (int j = 0; j < i; j++) {
         q.push(q.front());
