@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  vector<pair<int, int> > coords;
+  vector<pair<int, int>> coords;
   for (int i = 0; i < 3; i++) {
     int x, y;
     cin >> x >> y;
