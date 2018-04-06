@@ -14,7 +14,7 @@ int main() {
   };
   int d, m;
   cin >> d >> m;
-  vector<vector<int> > calendar(12);
+  vector<vector<int>> calendar(12);
   int start = 3; // 1.1.2009 = Thursday
   for (int i = 0; i < dinm.size(); i++) {
     calendar[i].resize(dinm[i]);
