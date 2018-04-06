@@ -11,7 +11,7 @@ int main() {
     int y1 = stoi(d1.substr(0, 4));
     int y2 = stoi(d2.substr(0, 4));
     cout << name << " ";
-    if (y1 >= 2010 || y2 >= 1991) {
+    if (y1 >= 2010 or y2 >= 1991) {
       cout << "eligible\n";
     } else if (courses >= 41) {
       cout << "ineligible\n";
