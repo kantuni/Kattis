@@ -8,8 +8,9 @@ int main() {
   while (n--) {
     string line;
     getline(cin, line);
-    if (line == "P=NP") cout << "skipped\n";
-    else {
+    if (line == "P=NP") {
+      cout << "skipped\n";
+    } else {
       istringstream iss(line);
       int a, b;
       char op;
