@@ -10,10 +10,14 @@ int main() {
     int p;
     cin >> s >> p;
     if (s == "enter") {
-      if (curr + p <= l) curr += p;
-      else ans++;
+      if (curr + p <= l) {
+        curr += p;
+      } else {
+        ans++;
+      }
+    } else {
+      curr -= p;
     }
-    else curr -= p;
   }
   cout << ans << "\n";
   return 0;
