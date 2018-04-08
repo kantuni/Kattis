@@ -15,7 +15,8 @@ int main() {
     double v1, v2;
     v1 = (x - 2 * h1) * (y - 2 * h1) * h1;
     v2 = (x - 2 * h2) * (y - 2 * h2) * h2;
-    printf("%.7f\n", max(v1, v2));
+    cout << fixed << setprecision(7);
+    cout << max(v1, v2) << "\n";
   }
   return 0;
 }
