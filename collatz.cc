@@ -7,46 +7,37 @@ int main() {
     if (a == 0 and b == 0) {
       break;
     }
-    set<int> A, B;
-    A.insert(a);
-    B.insert(b);
-    int na = a, nb = b, meet = 1;
-    int cnt = 0;
+    unordered_map<int, int> A, B;
+    int sa = 0, sb = 0;
+    A[a] = sa++;
+    B[b] = sb++;
+    int na = a, nb = b;
+    int meet = 1;
     while (true) {
-      set<int> AnB;
-      set_intersection(
-        A.begin(), A.end(), 
-        B.begin(), B.end(),
-        inserter(AnB, AnB.begin())
-      );
-      if (AnB.size()) {
-        meet = *AnB.begin();
+      if (A.count(nb) or B.count(na)) {
+        meet = A.count(nb) ? nb : na;
         break;
       }
       if (na == 1 and nb == 1) {
         break;
-      } else if (na != 1) {
+      }
+      if (na != 1) {
         na = (na % 2) ? 3 * na + 1 : na / 2;
-        A.insert(na);
-      } else if (nb != 1) {
+        if (!A.count(na)) {
+          A[na] = sa;
+        }
+        sa++;
+      }
+      if (nb != 1) {
         nb = (nb % 2) ? 3 * nb + 1 : nb / 2;
-        B.insert(nb);
+        if (!B.count(nb)) {
+          B[nb] = sb;
+        }
+        sb++;
       }
     }
-    cout << a << " needs ";
-    int sa = 0;
-    while (a != meet) {
-      a = (a % 2) ? 3 * a + 1 : a / 2;
-      sa++;
-    }
-    cout << sa << " steps, ";
-    cout << b << " needs ";
-    int sb = 0;
-    while (b != meet) {
-      b = (b % 2) ? 3 * b + 1 : b / 2;
-      sb++;
-    }
-    cout << sb << " steps, ";
+    cout << a << " needs " << A[meet] << " steps, ";
+    cout << b << " needs " << B[meet] << " steps, ";
     cout << "they meet at " << meet << "\n";
   }
   return 0;
