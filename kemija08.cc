@@ -2,7 +2,7 @@
 using namespace std;
 
 bool isvowel(char c) {
-  return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+  return c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u';
 }
 
 int main() {
@@ -12,9 +12,13 @@ int main() {
     string dec;
     for (int i = 0; i < enc.size(); i++) {
       dec += enc[i];
-      if (isvowel(enc[i])) i += 2;
+      if (isvowel(enc[i])) {
+        i += 2;
+      }
     }
-    if (wc != 0) cout << " ";
+    if (wc != 0) {
+      cout << " ";
+    }
     cout << dec;
     wc++;
   }
