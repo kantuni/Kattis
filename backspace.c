@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-  size_t size = 1000005;
+  int size = 1000005;
   char s[size];
   if (scanf("%s", s) == 1) {
     int len = strlen(s) + 1;
