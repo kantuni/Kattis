@@ -2,12 +2,12 @@
 #include <string.h>
 
 int main() {
-  size_t size = 1000005;
-  char s[size];
+  char s[1000005];
   int nop = scanf("%s", s);
-  size_t len = strlen(s) + 1, curr = 0;
+  int len = strlen(s) + 1;  
   char ans[len];
-  for (size_t i = 0; i < len; i++) {
+  int curr = 0;
+  for (int i = 0; i < len; i++) {
     if (s[i] == '<') {
       curr--;
       ans[curr] = '\0';
