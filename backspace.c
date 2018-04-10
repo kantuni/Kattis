@@ -1,25 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-  char s[1000005];
-  int len = 0;
-  while (1) {
-    char c = getchar();
-    if (c == EOF) {
-      s[len++] = '\0';
-      break;
+  size_t size = 1000005;
+  char s[size];
+  if (scanf("%s", s) == 1) {
+    int len = strlen(s) + 1;
+    char ans[len];
+    int curr = 0;
+    for (int i = 0; i < len; i++) {
+      if (s[i] == '<') {
+        ans[--curr] = '\0';
+      } else {
+        ans[curr++] = s[i];
+      }
     }
-    s[len++] = c;
+    printf("%s\n", ans);
   }
-  char ans[len];
-  int curr = 0;
-  for (int i = 0; i < len; i++) {
-    if (s[i] == '<') {
-      ans[--curr] = '\0';
-    } else {
-      ans[curr++] = s[i];
-    }
-  }
-  printf("%s", ans);
   return 0;
 }
