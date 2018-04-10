@@ -4,7 +4,7 @@ int main() {
   char s[1000005];
   int len = 0;
   while (1) {
-    char c = getchar_unlocked();
+    char c = getchar();
     if (c == EOF) {
       s[len++] = '\0';
       break;
