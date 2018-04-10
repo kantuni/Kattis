@@ -10,9 +10,11 @@ int main() {
     size_t curr = 0;
     for (size_t i = 0; i < len; i++) {
       if (s[i] == '<') {
-        ans[--curr] = '\0';
+        curr--;
+        ans[curr] = '\0';
       } else {
-        ans[curr++] = s[i];
+        ans[curr] = s[i];
+        curr++;
       }
     }
     printf("%s\n", ans);
