@@ -7,7 +7,9 @@ int main() {
   for (int i = 0; i < 5; i++) {
     for (int j = 0; j < 5; j++) {
       cin >> B[i][j];
-      if (B[i][j] == 'k') knights++;
+      if (B[i][j] == 'k') {
+        knights++;
+      }
     }
   }
   char dr[8] = {-1, -2, -2, -1, 1, 2, 2, 1};
@@ -27,7 +29,10 @@ int main() {
       }
     }
   }
-  if (valid and knights == 9) cout << "valid\n";
-  else cout << "invalid\n";
+  if (valid and knights == 9) {
+    cout << "valid\n";
+  } else {
+    cout << "invalid\n";
+  }
   return 0;
 }
