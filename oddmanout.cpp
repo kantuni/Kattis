@@ -11,8 +11,11 @@ int main() {
     for (int j = 0; j < g; j++) {
       int c;
       cin >> c;
-      if (s.count(c)) s.erase(c);
-      else s.insert(c);
+      if (s.count(c)) {
+        s.erase(c);
+      } else {
+        s.insert(c);
+      }
     }
     cout << "Case #" << i + 1 << ": ";
     cout << *s.begin() << "\n";
