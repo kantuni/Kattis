@@ -7,8 +7,11 @@ int main() {
   while (n--) {
     int x;
     cin >> x;
-    if (x % 2) cout << x << " is odd\n";
-    else cout << x << " is even\n";
+    if (x % 2) {
+      cout << x << " is odd\n";
+    } else {
+      cout << x << " is even\n";
+    }
   }
   return 0;
 }
