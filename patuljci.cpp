@@ -17,7 +17,9 @@ int main() {
     }
   }
   for (int i = 0; i < 9; i++) {
-    if (dwarves[i] != 0) cout << dwarves[i] << "\n";
+    if (dwarves[i] != 0) {
+      cout << dwarves[i] << "\n";
+    }
   }
   return 0;
 }
