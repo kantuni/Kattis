@@ -8,9 +8,11 @@ int main() {
     int n;
     cin >> n;
     vector<int> pos(n);
-    for (int i = 0; i < n; i++) cin >> pos[i];
+    for (int i = 0; i < n; i++) {
+      cin >> pos[i];
+    }
     sort(pos.begin(), pos.end());
-    cout << 2 * (pos[pos.size() - 1] - pos[0]) << "\n";
+    cout << 2 * (pos[n - 1] - pos[0]) << "\n";
   }
   return 0;
 }
