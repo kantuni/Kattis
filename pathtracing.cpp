@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  vector<pair<int, int> > moves;
+  vector<pair<int, int>> moves;
   string move;
   while (getline(cin, move)) {
     if (move == "left") {
@@ -20,7 +20,7 @@ int main() {
   int y, ymin, ymax;
   x = xmin = xmax = n / 2;
   y = ymin = ymax = n / 2;
-  vector<vector<char> > M(n, vector<char>(n, ' '));
+  vector<vector<char>> M(n, vector<char>(n, ' '));
   for (int i = 0; i < moves.size(); i++) {
     x += moves[i].first;
     y += moves[i].second;
