@@ -10,7 +10,6 @@ int main() {
       M[r][c] = line[c];
     }
   }
-  // up, down, left, right
   int dr[4] = {-1, 1, 0, 0};
   int dc[4] = {0, 0, -1, 1};
   int ans = 0;
