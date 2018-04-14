@@ -10,7 +10,7 @@ int main() {
   }
   int miss = 0;
   for (int fi: f) {
-    if (fi % 2 == 1) {
+    if (fi % 2) {
       miss++;
     }
   }
