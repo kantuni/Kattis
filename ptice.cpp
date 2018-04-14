@@ -24,13 +24,13 @@ int main() {
   int m = max({ac, bc, gc});
   cout << m << "\n";
   if (ac == m) {
-    cout << "Adrian\n";
+    cout << "Adrian" << "\n";
   }
   if (bc == m) {
-    cout << "Bruno\n";
+    cout << "Bruno" << "\n";
   }
   if (gc == m) {
-    cout << "Goran\n";
+    cout << "Goran" << "\n";
   }
   return 0;
 }
