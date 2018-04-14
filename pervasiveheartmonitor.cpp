@@ -10,8 +10,9 @@ int main() {
     string name = "", word;
     while (iss >> word) {
       char first = word[0];
-      if (isalpha(first)) name += " " + word;
-      else {
+      if (isalpha(first)) {
+        name += " " + word;
+      } else {
         average += stod(word);
         n++;
       }
