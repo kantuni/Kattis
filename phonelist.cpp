@@ -8,7 +8,9 @@ int main() {
     int n;
     cin >> n;
     vector<string> numbers(n);
-    for (int i = 0; i < n; i++) cin >> numbers[i];
+    for (int i = 0; i < n; i++) {
+      cin >> numbers[i];
+    }
     sort(numbers.begin(), numbers.end());
     bool ok = true;
     for (int i = 1; i < n; i++) {
@@ -19,7 +21,7 @@ int main() {
         break;
       }
     }
-    cout << (ok ? "YES\n" : "NO\n");
+    cout << (ok ? "YES" : "NO") << "\n";
   }
   return 0;
 }
