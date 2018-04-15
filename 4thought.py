@@ -1,23 +1,20 @@
+def solve(number):
+    operations = ["*", "+", "-", "//"]
+    for op1 in operations:
+        for op2 in operations:
+            for op3 in operations:
+                exp = "4 {} 4 {} 4 {} 4".format(op1, op2, op3)
+                if eval(exp) == number:
+                    exp = exp.replace("//", "/")
+                    return "{} = {}".format(exp, number)
+
+
 m = int(input())
 while m > 0:
     n = int(input())
-    operations = ["*", "+", "-", "//"]
-    possible = False
-    for op1 in operations:
-        if possible:
-            break
-        for op2 in operations:
-            if possible:
-                break
-            for op3 in operations:
-                exp = "4 " + op1 + " 4 " + op2
-                exp += " 4 " + op3 + " 4"
-                if eval(exp) == n:
-                    possible = True
-                    exp = exp.replace("//", "/")
-                    print(exp, "=", n)
-                    break
-    if not possible:
+    answer = solve(n)
+    if answer is None:
         print("no solution")
+    else:
+        print(answer)
     m -= 1
-
