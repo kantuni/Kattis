@@ -6,3 +6,6 @@
 
 # Java
 *.class
+
+# IDE
+.idea
