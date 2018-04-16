@@ -2,18 +2,18 @@
 using namespace std;
 
 int main() {
+  unordered_map<char, int> alphabet;
+  for (int i = 0; i < 26; i++) {
+    alphabet['A' + i] = i + 1;
+  }
+  alphabet[' '] = 27;
+  alphabet['\''] = 28;
   int n;
   cin >> n;
   cin.ignore();
   while (n--) {
     string s;
     getline(cin, s);
-    unordered_map<char, int> alphabet;
-    for (int i = 0; i < 26; i++) {
-      alphabet['A' + i] = i + 1;
-    }
-    alphabet[' '] = 27;
-    alphabet['\''] = 28;
     int prev = alphabet[s[0]];
     double ans = 1.0;
     for (int i = 1; i < s.size(); i++) {
