@@ -4,12 +4,10 @@ using namespace std;
 int main() {
   int x, y;
   cin >> x >> y;
-  
-  if (y % 2 == 0) {
-    cout << "possible\n";
+  if (y % 2) {
+    cout << "impossible" << "\n";
   } else {
-    cout << "impossible\n";
+    cout << "possible" << "\n";
   }
-  
   return 0;
 }
