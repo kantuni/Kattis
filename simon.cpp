@@ -9,10 +9,9 @@ int main() {
     string line;
     getline(cin, line);
     if (line.size() > 10 and line.substr(0, 10) == "simon says") {
-      cout << line.substr(11) << "\n";
-    } else {
-      cout << "\n";
+      cout << line.substr(11);
     }
+    cout << "\n";
   }
   return 0;
 }
