@@ -9,15 +9,17 @@ int main() {
   while (n--) {
     string action, name;
     cin >> action >> name;
-    if (!inside.count(name)) inside[name] = false;
+    if (!inside.count(name)) {
+      inside[name] = false;
+    }
     cout << name;
     if (action == "entry") {
       cout << " entered";
-      cout << (inside[name] ? " (ANOMALY)\n" : "\n");
+      cout << (inside[name] ? " (ANOMALY)" : "") << "\n";
       inside[name] = true;
     } else {
       cout << " exited";
-      cout << (!inside[name] ? " (ANOMALY)\n" : "\n");
+      cout << (!inside[name] ? " (ANOMALY)" : "") << "\n";
       inside[name] = false;
     }
   }
