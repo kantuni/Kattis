@@ -6,15 +6,21 @@ int main() {
   string line;
   while (getline(cin, line)) {
     istringstream iss(line);
-    int n; iss >> n;
+    int n;
+    iss >> n;
     vector<int> X(n);
     int min = 1e7, max = -1e7;
     for (int i = 0; i < n; i++) {
       iss >> X[i];
-      if (X[i] < min) min = X[i];
-      if (X[i] > max) max = X[i];
+      if (X[i] < min) {
+        min = X[i];
+      }
+      if (X[i] > max) {
+        max = X[i];
+      }
     }
-    printf("Case %d: %d %d %d\n", t, min, max, max - min);
+    cout << "Case " << t << ": ";
+    cout << min << " " << max << " " << max - min << "\n";
     t++;
   }
   return 0;
