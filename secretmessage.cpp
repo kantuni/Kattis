@@ -17,7 +17,7 @@ int main() {
       m++;
     }
     int r = sqrt(m), c = sqrt(m);
-    vector<vector<char> > table(r, vector<char>(c));
+    vector<vector<char>> table(r, vector<char>(c));
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
         table[i][j] = s[i * r + j];
