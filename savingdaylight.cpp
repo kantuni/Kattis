@@ -13,7 +13,9 @@ int main() {
     iss >> hh1 >> colon >> mm1;
     iss >> hh2 >> colon >> mm2;
     cout << month << " " << day << " " << year << " ";
-    if (mm1 > mm2) hh2--;
+    if (mm1 > mm2) {
+      hh2--;
+    }
     cout << hh2 - hh1 << " hours ";
     cout << (mm2 - mm1 + 60) % 60 << " minutes\n";
   }
