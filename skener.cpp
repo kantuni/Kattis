@@ -4,8 +4,9 @@ using namespace std;
 int main() {
   int r, c, zr, zc;
   cin >> r >> c >> zr >> zc;
-  vector<vector<char>> A(r, vector<char>(c));
-  vector<vector<char>> M(r * zr, vector<char>(c * zc));
+  vector<vector<char>> A, M;
+  A.resize(r, vector<char>(c));
+  M.resize(r * zr, vector<char>(c * zc));
   for (int i = 0; i < r; i++) {
     for (int j = 0; j < c; j++) {
       cin >> A[i][j];
