@@ -4,7 +4,6 @@ using namespace std;
 int main() {
   int t;
   cin >> t;
-  
   while (t--) {
     vector<int> num;
     while (true) {
@@ -15,7 +14,6 @@ int main() {
       }
       num.push_back(n);
     }
-    
     int ans = 0;
     for (int i = 0; i < num.size() - 1; i++) {
       if (num[i + 1] > 2 * num[i]) {
