@@ -7,32 +7,24 @@ int main() {
     int n;
     cin >> n;
     cin.ignore();
-
     if (n == 0) {
       break;
     }
-
     map<string, int> memo;
-
     while (n--) {
       string line;
       getline(cin, line);
-      
       istringstream iss(line);
       string animal;
       while (iss >> animal);
-
       transform(animal.begin(), animal.end(), animal.begin(), ::tolower);
       memo[animal] += 1;
     }
-
-    cout << "List " << ln << ":\n";
+    cout << "List " << ln << ":" << "\n";
     for (auto m: memo) {
       cout << m.first << " | " << m.second << "\n";
     }
-
-    ln += 1;
+    ln++;
   }
-
   return 0;
 }
