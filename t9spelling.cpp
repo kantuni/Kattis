@@ -21,11 +21,18 @@ int main() {
     getline(cin, line);
     for (int i = 0; i < line.size(); i++) {
       char prev = '-', curr = '-';
-      if (i > 0) prev = (line[i - 1] == ' ') ? ' ' : t9[line[i - 1] - 'a'][0];
+      if (i > 0) {
+        prev = (line[i - 1] == ' ') ? ' ' : t9[line[i - 1] - 'a'][0];
+      }
       curr = (line[i] == ' ') ? ' ' : t9[line[i] - 'a'][0];
-      if (prev == curr) m += " ";
-      if (line[i] == ' ') m += "0";
-      else m += t9[line[i] - 'a'];
+      if (prev == curr) {
+        m += " ";
+      }
+      if (line[i] == ' ') {
+        m += "0";
+      } else {
+        m += t9[line[i] - 'a'];
+      }
     }
     cout << "Case #" << t++ << ": " << m << "\n";
   }
