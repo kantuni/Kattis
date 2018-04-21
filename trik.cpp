@@ -4,7 +4,6 @@ using namespace std;
 int main() { 
   string moves;
   cin >> moves;
-  
   int cups[3] = {1, 0, 0};
   for (int i = 0; i < moves.size(); i++) {
     if (moves[i] == 'A') {
@@ -15,12 +14,10 @@ int main() {
       swap(cups[0], cups[2]);
     }
   }
-  
   for (int i = 0; i < 3; i++) {
     if (cups[i] == 1) {
       cout << i + 1 << "\n";
     }
   }
-  
   return 0;
 }
