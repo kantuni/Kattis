@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<pair<double, double> > points;
+// globals
+vector<pair<double, double>> points;
 
 double dist(int i, int j) {
   return hypot(
@@ -13,35 +14,30 @@ double dist(int i, int j) {
 int main() {
   int n;
   cin >> n;
-  
   points.resize(n);
   for (int i = 0; i < n; i++) {
     double x, y;
     cin >> x >> y;
     points[i] = make_pair(x, y);
   }
-  
   vector<int> tour(n);
   vector<bool> used(n, false);
-  
   tour[0] = 0;
   used[0] = true;
   for (int i = 1; i < n; i++) {
     int best = -1;
     for (int j = 0; j < n; j++) {
       bool c1 = !used[j];
-      bool c2 = best == -1 || dist(tour[i - 1], j) < dist(tour[i - 1], best);
-      if (c1 && c2) {
+      bool c2 = best == -1 or dist(tour[i - 1], j) < dist(tour[i - 1], best);
+      if (c1 and c2) {
         best = j;
       }
     }
     tour[i] = best;
     used[best] = true;
   }
-  
   for (int i = 0; i < n; i++) {
     cout << tour[i] << "\n";
   }
-  
   return 0;
 }
