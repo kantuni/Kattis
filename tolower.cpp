@@ -11,16 +11,21 @@ int main() {
     for (int j = 0; j < t; j++) {
       string line;
       getline(cin, line);
-      if (!ok) continue;
-      else {
+      if (!ok) {
+        continue;
+      } else {
         string copy = line;
         for (int k = 1; k < copy.size(); k++) {
           copy[k] = tolower(copy[k]);
         }
-        if (copy != line) ok = false;
+        if (copy != line) {
+          ok = false;
+        }
       }
     }
-    if (ok) ans++;
+    if (ok) {
+      ans++;
+    }
   }
   cout << ans << "\n";
   return 0;
