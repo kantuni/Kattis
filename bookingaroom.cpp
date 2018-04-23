@@ -19,7 +19,7 @@ int main() {
     }
   }
   if (!empty) {
-    cout << "too late\n";
+    cout << "too late" << "\n";
   }
   return 0;
 }
