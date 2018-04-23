@@ -24,7 +24,7 @@ int main() {
       string t;
       iss >> t;
       if (!memo.count(t)) {
-        cout << "eh\n";
+        cout << "eh" << "\n";
       } else {
         cout << memo[t] << "\n";
       }
