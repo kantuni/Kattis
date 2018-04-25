@@ -27,7 +27,8 @@ int main() {
         length -= 1;
       }
     }
-    printf("Case #%d: %d\n", i, (length - 1 >= 0) ? length - 1 : 0);
+    cout << "Case #" << i << ": ";
+    cout << (length - 1 >= 0 ? length - 1 : 0) << "\n";
   }
   return 0;
 }
