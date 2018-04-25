@@ -8,11 +8,9 @@ int main() {
     cin >> x >> y;
     coords.push_back(make_pair(x, y));
   }
-  
   // (x1, y1), (x1, y2), (x2, y1), (x2, y2)
   // where x1 ≥ x2, y1 ≥ y2
   sort(coords.begin(), coords.end());
-  
   pair<int, int> ans;
   int dx, dy;
   if (coords[0].first == coords[1].first) {
