@@ -1,3 +1,5 @@
+// To Be Continued...
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -133,7 +135,7 @@ int main() {
   ok &= no_duplicates_in_boxes();
   ok &= solve();
   if (!ok) {
-    cout << "ERROR\n";
+    cout << "ERROR" << "\n";
   } else {
     cout << "\n";
     for (int r = 0; r < 9; r++) {
