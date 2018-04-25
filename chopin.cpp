@@ -20,7 +20,7 @@ int main() {
     if (memo.count(note) > 0) {
       cout << memo[note] << " " << tonality << "\n";
     } else {
-      cout << "UNIQUE\n";
+      cout << "UNIQUE" << "\n";
     }
   }
   return 0;
