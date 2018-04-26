@@ -6,8 +6,8 @@ int main() {
   cin >> n >> m;
   int hp = -1;
   vector<int> res(n + m + 1, 0);
-  for (int i = 1; i <= n; i++) {
-    for (int j = 1; j <= m; j++) {
+  for (int i = 1; i < n + 1; i++) {
+    for (int j = 1; j < m + 1; j++) {
       res[i + j]++;
       hp = max(hp, res[i + j]);
     }
