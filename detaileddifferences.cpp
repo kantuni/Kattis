@@ -7,7 +7,8 @@ int main() {
   for (int i = 0; i < n; i++) {
     string a, b;
     cin >> a >> b;
-    cout << a << "\n" << b << "\n";
+    cout << a << "\n";
+    cout << b << "\n";
     for (int i = 0; i < a.size(); i++) {
       cout << (a[i] == b[i] ? "." : "*");
     }
