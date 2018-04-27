@@ -10,7 +10,8 @@ int main() {
     }
     double carea = acos(-1.0) * r * r;
     double sarea = 4 * r * r;
-    printf("%.7f %.7f\n", carea, sarea * c / m);
+    cout << fixed << setprecision(7);
+    cout << carea << " " << sarea * c / m << "\n";
   }
   return 0;
 }
