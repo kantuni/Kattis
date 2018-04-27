@@ -18,9 +18,9 @@ int main() {
       swap(b, c);
     }
     if (a * a + b * b == c * c) {
-      cout << "right\n";
+      cout << "right" << "\n";
     } else {
-      cout << "wrong\n";
+      cout << "wrong" << "\n";
     }
   }
   return 0;
