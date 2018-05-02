@@ -9,7 +9,7 @@ int main() {
     string line;
     getline(cin, line);
     if (line == "P=NP") {
-      cout << "skipped\n";
+      cout << "skipped" << "\n";
     } else {
       istringstream iss(line);
       int a, b;
