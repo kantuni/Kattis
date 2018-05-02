@@ -12,9 +12,9 @@ int main() {
     }
   }
   if (hiss) {
-    cout << "hiss\n";
+    cout << "hiss" << "\n";
   } else {
-    cout << "no hiss\n";
+    cout << "no hiss" << "\n";
   }
   return 0;
 }
