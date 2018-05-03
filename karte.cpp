@@ -9,7 +9,7 @@ int main() {
   for (int i = 0; i < s.size(); i += 3) {
     string c = s.substr(i, 3);
     if (cards.count(c) > 0) {
-      cout << "GRESKA\n";
+      cout << "GRESKA" << "\n";
       return 0;
     }
     cards.insert(c);
