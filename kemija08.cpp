@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isvowel(char c) {
+bool vowel(char c) {
   return c == 'a' or c == 'e' or c == 'i' or c == 'o' or c == 'u';
 }
 
@@ -12,7 +12,7 @@ int main() {
     string dec;
     for (int i = 0; i < enc.size(); i++) {
       dec += enc[i];
-      if (isvowel(enc[i])) {
+      if (vowel(enc[i])) {
         i += 2;
       }
     }
