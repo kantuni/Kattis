@@ -12,11 +12,11 @@ int main() {
   sort(inc.begin(), inc.end());
   sort(dec.rbegin(), dec.rend());
   if (names == inc) {
-    cout << "INCREASING\n";
+    cout << "INCREASING" << "\n";
   } else if (names == dec) {
-    cout << "DECREASING\n";
+    cout << "DECREASING" << "\n";
   } else {
-    cout << "NEITHER\n";
+    cout << "NEITHER" << "\n";
   }
   return 0;
 }
