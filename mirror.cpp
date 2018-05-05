@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int T;
   cin >> T;
-  for (int t = 1; t <= T; t++) {
+  for (int t = 1; t < T + 1; t++) {
     int r, c;
     cin >> r >> c;
     vector<vector<char>> M(r, vector<char>(c));
