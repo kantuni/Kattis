@@ -30,9 +30,9 @@ int main() {
     }
   }
   if (valid and knights == 9) {
-    cout << "valid\n";
+    cout << "valid" << "\n";
   } else {
-    cout << "invalid\n";
+    cout << "invalid" << "\n";
   }
   return 0;
 }
