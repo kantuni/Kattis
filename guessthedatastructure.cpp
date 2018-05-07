@@ -33,10 +33,10 @@ int main() {
         }
       }
     }
-    int count = c1 + c2 + c3;
-    if (count == 0) {
+    int cnt = c1 + c2 + c3;
+    if (cnt == 0) {
       cout << "impossible" << "\n";
-    } else if (count == 1) {
+    } else if (cnt == 1) {
       if (c1) {
         cout << "stack" << "\n";
       } else if (c2) {
