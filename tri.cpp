@@ -5,18 +5,17 @@ int main() {
   int a, b, c;
   cin >> a >> b >> c;
   if (a + b == c) {
-    cout << a << "+" << b << "=" << c;
+    cout << a << "+" << b << "=" << c << "\n";
   } else if (a - b == c) {
-    cout << a << "-" << b << "=" << c;
+    cout << a << "-" << b << "=" << c << "\n";
   } else if (a * b == c) {
-    cout << a << "*" << b << "=" << c;
+    cout << a << "*" << b << "=" << c << "\n";
   } else if (a == b - c) {
-    cout << a << "=" << b << "-" << c;
+    cout << a << "=" << b << "-" << c << "\n";
   } else if (a == b * c) {
-    cout << a << "=" << b << "*" << c;
+    cout << a << "=" << b << "*" << c << "\n";
   } else {
-    cout << a << "=" << b << "/" << c;
+    cout << a << "=" << b << "/" << c << "\n";
   }
-  cout << "\n"; 
   return 0;
 }
