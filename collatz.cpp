@@ -1,67 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-map<int, int> memo;
-
-int meet(int a, int b) {
-  set<int> visited;
-  while (a != 1) {
-    visited.insert(a);
-    a = memo[a];
-  }
-  while (b != 1) {
-    if (visited.count(b)) {
-      return b;
-    }
-    b = memo[b];
-  }
-  return 1;
-}
-
 int main() {
   int a, b;
   while (cin >> a >> b) {
     if (a == 0 and b == 0) {
       break;
     }
-    int ac = a;
-    while (ac != 1 and !memo.count(ac)) {
-      int next;
-      if (ac % 2) {
-        next = 3 * ac + 1;
-      } else {
-        next = ac / 2;
+    unordered_map<int, int> memo;
+    int meet = 1;
+    int ac = a, acnt = 0;
+    while (ac != 1) {
+      memo[ac] = acnt;
+      ac = (ac % 2) ? 3 * ac + 1 : ac / 2;
+      acnt++;
+    }
+    int bc = b, bcnt = 0;
+    while (bc != 1) {
+      if (memo.count(bc)) {
+        meet = bc;
+        break;
       }
-      memo[ac] = next;
-      ac = next;
+      bc = (bc % 2) ? 3 * bc + 1 : bc / 2;
+      bcnt++;
     }
-    int bc = b;
-    while (bc != 1 and !memo.count(bc)) {
-      int next;
-      if (bc % 2) {
-        next = 3 * bc + 1;
-      } else {
-        next = bc / 2;
-      }
-      memo[bc] = next;
-      bc = next;
-    }
-    int c = meet(a, b);
-    cout << a << " needs ";
-    int sa = 0;
-    while (a != c) {
-      a = memo[a];
-      sa++;
-    }
-    cout << sa << " steps, ";
-    cout << b << " needs ";
-    int sb = 0;
-    while (b != c) {
-      b = memo[b];
-      sb++;
-    }
-    cout << sb << " steps, ";
-    cout << "they meet at " << c << "\n";
+    int sa = memo[meet], sb = bcnt;
+    cout << a << " needs " << sa << " steps, ";
+    cout << b << " needs " << sb << " steps, ";
+    cout << "they meet at " << meet << "\n";
   }
   return 0;
 }
