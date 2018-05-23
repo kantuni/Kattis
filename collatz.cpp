@@ -1,50 +1,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-unordered_map<long long, long long> fromA;
-long long C;
-
-void Ato1(long long A) {
-  fromA[A] = 0;
-  long long cnt = 0;
-  while (A > 1) {
-    A = (A % 2) ? 3 * A + 1 : A / 2;
-    cnt++;
-    fromA[A] = cnt;
-  }
-}
-
-long long BtoA(long long B) {
-  if (fromA.count(B)) {
-    C = B;
-    return 0;
-  }
-  long long cnt = 0;
-  while (B > 1) {
-    B = (B % 2) ? 3 * B + 1 : B / 2;
-    cnt++;
-    if (fromA.count(B)) {
-      C = B;
-      return cnt;
-    }
-  }
-  C = 1;
-  return cnt;
-}
-
 int main() {
-  long long A, B;
-  while (cin >> A >> B) {
-    if (A == 0 and B == 0) {
+  long long a, b;
+  while (cin >> a >> b) {
+    if (a == 0 and b == 0) {
       break;
     }
-    Ato1(A);                     // (1)
-    long long Sb = BtoA(B);      // (2)
-    long long Sa = fromA[C];     // (3)
-    cout << A << " needs " << Sa << " steps, ";
-    cout << B << " needs " << Sb << " steps, ";
-    cout << "they meet at " << C << "\n";
-    fromA.clear();
+    unordered_map<long long, long long> fa;
+    long long ac = a, acnt = 0;
+    fa[ac] = 0;
+    while (ac != 1) {
+      ac = (ac % 2) ? 3 * ac + 1 : ac / 2;
+      acnt++;
+      fa[ac] = acnt;
+    }
+    long long c;
+    long long bc = b, bcnt = 0;
+    if (fa.count(b)) {
+      c = b;
+    } else {
+      while (bc != 1) {
+        bc = (bc % 2) ? 3 * bc + 1 : bc / 2;
+        bcnt++;
+        if (fa.count(bc)) {
+          c = bc;
+          break;
+        }
+      }
+    }
+    long long sa = fa[c], sb = bcnt;
+    cout << a << " needs " << sa << " steps, ";
+    cout << b << " needs " << sb << " steps, ";
+    cout << "they meet at " << c << "\n";
   }
   return 0;
 }
