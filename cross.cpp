@@ -122,8 +122,8 @@ int hatch(vector<vector<char>> &modified, int n) {
 
 bool solve() {
   bool ok = (
-    no_duplicates_in_rows() &&
-    no_duplicates_in_columns() &&
+    no_duplicates_in_rows() and
+    no_duplicates_in_columns() and
     no_duplicates_in_boxes()
   );
   if (!ok) {
