@@ -22,7 +22,6 @@ bool no_duplicates_in_rows() {
   return ok;
 }
 
-
 bool no_duplicates_in_columns() {
   bool ok = true;
   for (int c = 0; c < 9; c++) {
