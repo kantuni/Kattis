@@ -74,7 +74,11 @@ void cross(vector<vector<char>> &modified, int n) {
         for (int i = 0; i < 9; i++) {
           modified[i][c] = 'x';
         }
-        // 1. cross out the 3x3 box
+        for (int dr = 0; dr < 3; dr++) {
+          for (int dc = 0; dc < 3; dc++) {
+            modified[3 * (r / 3) + dr][3 * (c / 3) + dc] = 'x';
+          }
+        }
       }
     }
   }
@@ -105,10 +109,12 @@ int hatch(vector<vector<char>> &modified, int n) {
 }
 
 bool solve() {
+  // It is also possible that there
+  // will be no available cell 
+  // for a number in a 3x3 box.
+  // In that case, you are to report an error.
   bool more = true;
   while (more) {
-    // 2. uncomment the code below
-    /*
     bool ok = 
       no_duplicates_in_rows()     &&
       no_duplicates_in_columns()  &&
@@ -116,7 +122,6 @@ bool solve() {
     if (!ok) {
       return false;
     }
-    */
     more = false;
     for (int n = 1; n < 10; n++) {
       auto modified(grid);
@@ -140,7 +145,6 @@ int main() {
   if (!ok) {
     cout << "ERROR" << "\n";
   } else {
-    cout << "\n";
     for (int r = 0; r < 9; r++) {
       for (int c = 0; c < 9; c++) {
         cout << grid[r][c];
