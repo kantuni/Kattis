@@ -69,14 +69,22 @@ void cross(vector<vector<char>> &modified, int n) {
     for (int c = 0; c < 9; c++) {
       if (modified[r][c] - '0' == n) {
         for (int i = 0; i < 9; i++) {
-          modified[r][i] = 'x';
+          if (modified[r][i] == '.') {
+            modified[r][i] = 'x';
+          }
         }
         for (int i = 0; i < 9; i++) {
-          modified[i][c] = 'x';
+          if (modified[i][c] == '.') {
+            modified[i][c] = 'x';
+          }
         }
         for (int dr = 0; dr < 3; dr++) {
           for (int dc = 0; dc < 3; dc++) {
-            modified[3 * (r / 3) + dr][3 * (c / 3) + dc] = 'x';
+            int br = 3 * (r / 3) + dr;
+            int bc = 3 * (c / 3) + dc;
+            if (modified[br][bc] == '.') {
+              modified[br][bc] = 'x';
+            }
           }
         }
       }
@@ -88,18 +96,23 @@ int hatch(vector<vector<char>> &modified, int n) {
   for (int r = 0; r < 9; r += 3) {
     for (int c = 0; c < 9; c += 3) {
       int nr, nc;
-      int cnt = 0;
+      int filled = 0, empty = 0;
       for (int dr = 0; dr < 3; dr++) {
         for (int dc = 0; dc < 3; dc++) {
           char cell = modified[r + dr][c + dc];
+          if (cell == n + '0') {
+            filled++;
+          }
           if (cell == '.') {
             nr = r + dr;
             nc = c + dc;
-            cnt++;
+            empty++;
           }
         }
       }
-      if (cnt == 1) {
+      if (filled + empty == 0) {
+        return -1;
+      } else if (empty == 1) {
         grid[nr][nc] = n + '0';
         return 1;
       }
@@ -109,19 +122,16 @@ int hatch(vector<vector<char>> &modified, int n) {
 }
 
 bool solve() {
-  // It is also possible that there
-  // will be no available cell 
-  // for a number in a 3x3 box.
-  // In that case, you are to report an error.
+  bool ok = (
+    no_duplicates_in_rows() &&
+    no_duplicates_in_columns() &&
+    no_duplicates_in_boxes()
+  );
+  if (!ok) {
+    return false;
+  }
   bool more = true;
   while (more) {
-    bool ok = 
-      no_duplicates_in_rows()     &&
-      no_duplicates_in_columns()  &&
-      no_duplicates_in_boxes();
-    if (!ok) {
-      return false;
-    }
     more = false;
     for (int n = 1; n < 10; n++) {
       auto modified(grid);
@@ -129,6 +139,8 @@ bool solve() {
       int result = hatch(modified, n);
       if (result == 1) {
         more = true;
+      } else if (result == -1) {
+        return false;
       }
     }
   }
@@ -142,15 +154,15 @@ int main() {
     }
   }
   bool ok = solve();
-  if (!ok) {
-    cout << "ERROR" << "\n";
-  } else {
+  if (ok) {
     for (int r = 0; r < 9; r++) {
       for (int c = 0; c < 9; c++) {
         cout << grid[r][c];
       }
       cout << "\n";
     }
+  } else {
+    cout << "ERROR" << "\n";
   }
   return 0;
 }
