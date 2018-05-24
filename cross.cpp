@@ -1,9 +1,7 @@
-// To Be Continued...
-
 #include <bits/stdc++.h>
 using namespace std;
 
-// global
+// globals
 vector<vector<char>> grid(9, vector<char>(9));
 
 bool no_duplicates_in_rows() {
@@ -15,8 +13,8 @@ bool no_duplicates_in_rows() {
         row.push_back(grid[r][c] - '0');
       }
     }
-    unordered_set<int> nodup(row.begin(), row.end());
-    if (row.size() != nodup.size()) {
+    set<int> s(row.begin(), row.end());
+    if (row.size() != s.size()) {
       ok = false;
       break;
     }
@@ -34,8 +32,8 @@ bool no_duplicates_in_columns() {
         column.push_back(grid[r][c] - '0');
       }
     }
-    unordered_set<int> nodup(column.begin(), column.end());
-    if (column.size() != nodup.size()) {
+    set<int> s(column.begin(), column.end());
+    if (column.size() != s.size()) {
       ok = false;
       break;
     }
@@ -50,14 +48,14 @@ bool no_duplicates_in_boxes() {
       vector<int> box;
       for (int dr = 0; dr < 3; dr++) {
         for (int dc = 0; dc < 3; dc++) {
-          char cell = grid[r + r % 3 + dr][c + c % 3 + dc];
+          char cell = grid[r + dr][c + dc];
           if (cell != '.') {
             box.push_back(cell - '0');
           }
         }
       }
-      unordered_set<int> nodup(box.begin(), box.end());
-      if (box.size() != nodup.size()) {
+      set<int> s(box.begin(), box.end());
+      if (box.size() != s.size()) {
         ok = false;
         break;
       }
@@ -71,11 +69,12 @@ void cross(vector<vector<char>> &modified, int n) {
     for (int c = 0; c < 9; c++) {
       if (modified[r][c] - '0' == n) {
         for (int i = 0; i < 9; i++) {
-         modified[r][i] = 'x';
+          modified[r][i] = 'x';
         }
         for (int i = 0; i < 9; i++) {
-         modified[i][c] = 'x';
-        } 
+          modified[i][c] = 'x';
+        }
+        // 1. cross out the 3x3 box
       }
     }
   }
@@ -88,17 +87,15 @@ int hatch(vector<vector<char>> &modified, int n) {
       int cnt = 0;
       for (int dr = 0; dr < 3; dr++) {
         for (int dc = 0; dc < 3; dc++) {
-          char cell = modified[r + r % 3 + dr][c + c % 3 + dc];
+          char cell = modified[r + dr][c + dc];
           if (cell == '.') {
-            nr = r + r % 3 + dr;
-            nc = c + c % 3 + dc;
+            nr = r + dr;
+            nc = c + dc;
             cnt++;
           }
         }
       }
-      if (cnt == 0) {
-        return -1;
-      } else if (cnt == 1) {
+      if (cnt == 1) {
         grid[nr][nc] = n + '0';
         return 1;
       }
@@ -110,14 +107,23 @@ int hatch(vector<vector<char>> &modified, int n) {
 bool solve() {
   bool more = true;
   while (more) {
+    // 2. uncomment the code below
+    /*
+    bool ok = 
+      no_duplicates_in_rows()     &&
+      no_duplicates_in_columns()  &&
+      no_duplicates_in_boxes();
+    if (!ok) {
+      return false;
+    }
+    */
     more = false;
     for (int n = 1; n < 10; n++) {
       auto modified(grid);
       cross(modified, n);
       int result = hatch(modified, n);
-      more = (result == 1) ? true : more; 
-      if (result == -1) {
-        return false;
+      if (result == 1) {
+        more = true;
       }
     }
   }
@@ -130,10 +136,7 @@ int main() {
       cin >> grid[r][c];
     }
   }
-  bool ok = no_duplicates_in_rows();
-  ok &= no_duplicates_in_columns();
-  ok &= no_duplicates_in_boxes();
-  ok &= solve();
+  bool ok = solve();
   if (!ok) {
     cout << "ERROR" << "\n";
   } else {
