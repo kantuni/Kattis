@@ -40,8 +40,7 @@ struct Node {
         }
         return this->right->find(k - l);
       }
-    }
-    if (this->right != NULL) {
+    } else if (this->right != NULL) {
       int r = this->right->size;
       if (this->size - r == k) {
         return this->value;
