@@ -2,41 +2,70 @@
 using namespace std;
 
 struct Node {
-  int value, size;
+  int x, y, size;
   Node *left, *right;
 
-  Node(int value) {
-    this->value = value;
+  Node(int x, Node *left = NULL, Node *right = NULL) {
+    this->x = x;
+    this->y = rand();
     this->size = 1;
-    this->left = NULL;
-    this->right = NULL;
-  }
-  
-  void insert(int value) {
-    if (value < this->value) {
-      if (this->left == NULL) {
-        this->left = new Node(value);
-      } else {
-        this->left->insert(value);
-      }
-    } else {
-      if (this->right == NULL) {
-        this->right = new Node(value);
-      } else {
-        this->right->insert(value);
-      }
-    }
-    this->size += 1;
+    this->left = left;
+    this->right = right;
   }
 
-  int smallest(int k) {
+  void recalc() {
+    int l = (this->left != NULL) ? this->left->size : 0;
+    int r = (this->right != NULL) ? this->right->size : 0;
+    this->size = l + r + 1;
+  }
+
+  Node* merge(Node *L, Node *R) {
+    if (L == NULL) return R;
+    if (R == NULL) return L;
+    Node *root;
+    if (L->y < R->y) {
+      R->left = merge(L, R->left);
+      root = R;
+    } else {
+      L->right = merge(L->right, R);
+      root = L;
+    }
+    root->recalc();
+    return root;
+  }
+
+  Node* split(int x, Node *T) {
+    if (T == NULL) return NULL;
+    Node *root;
+    if (x < T->x) {
+      Node *S = split(x, T->left);
+      Node *SL = (S != NULL) ? S->left : NULL;
+      Node *SR = (S != NULL) ? S->right : NULL;
+      T->left = SR;
+      root = new Node(x, SL, T);
+    } else {
+      Node *S = split(x, T->right);
+      Node *SL = (S != NULL) ? S->left : NULL;
+      Node *SR = (S != NULL) ? S->right : NULL;
+      T->right = SL;
+      root = new Node(x, T, SR);
+    }
+    root->recalc();
+    return root;
+  }
+
+  Node* insert(int x) {
+    return split(x, this);
+  }
+
+  int at(int k) {
     int m = (this->left != NULL) ? this->left->size : 0;
     if (k == m + 1) {
-      return this->value;
+      return this->x;
     } else if (k <= m) {
-       return this->left->smallest(k);
+       return this->left->at(k);
     } else {
-      return this->right->smallest(k - m - 1);
+      return this->right->at(k - m - 1);
     }
   }
 };
@@ -52,7 +81,7 @@ int main() {
     if (memo[s] == NULL) {
       memo[s] = new Node(y);
     } else {
-      memo[s]->insert(y);
+      memo[s] = memo[s]->insert(y);
     }
   }
   int q;
@@ -61,7 +90,7 @@ int main() {
     string s;
     int k;
     cin >> s >> k;
-    cout << memo[s]->smallest(k) << "\n";
+    cout << memo[s]->at(k) << "\n";
   }
   return 0;
 }
