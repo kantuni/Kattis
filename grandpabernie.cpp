@@ -29,26 +29,15 @@ struct Node {
     this->size += 1;
   }
 
-  int find(int k) {
-    if (this->left != NULL) {
-      int l = this->left->size;
-      if (k <= l) {
-        return this->left->find(k);
-      } else {
-        if (this->size - l == 1) {
-          return this->value;
-        }
-        return this->right->find(k - l);
-      }
-    } else if (this->right != NULL) {
-      int r = this->right->size;
-      if (this->size - r == k) {
-        return this->value;
-      } else {
-        return this->right->find(k - 1);
-      }
+  int smallest(int k) {
+    int m = (this->left != NULL) ? this->left->size : 0;
+    if (k == m + 1) {
+      return this->value;
+    } else if (k <= m) {
+       return this->left->smallest(k);
+    } else {
+      return this->right->smallest(k - m - 1);
     }
-    return this->value;
   }
 };
 
@@ -72,7 +61,7 @@ int main() {
     string s;
     int k;
     cin >> s >> k;
-    cout << memo[s]->find(k) << "\n";
+    cout << memo[s]->smallest(k) << "\n";
   }
   return 0;
 }
