@@ -19,21 +19,6 @@ struct Node {
     this->size = l + r + 1;
   }
 
-  Node* merge(Node *L, Node *R) {
-    if (L == NULL) return R;
-    if (R == NULL) return L;
-    Node *root;
-    if (L->y < R->y) {
-      R->left = merge(L, R->left);
-      root = R;
-    } else {
-      L->right = merge(L->right, R);
-      root = L;
-    }
-    root->recalc();
-    return root;
-  }
-
   Node* split(int x, Node *T) {
     if (T == NULL) return NULL;
     Node *root;
