@@ -152,8 +152,8 @@ int main() {
       cin >> grid[r][c];
     }
   }
-  bool ok = solve();
-  if (ok) {
+  bool solved = solve();
+  if (solved) {
     for (int r = 0; r < 9; r++) {
       for (int c = 0; c < 9; c++) {
         cout << grid[r][c];
