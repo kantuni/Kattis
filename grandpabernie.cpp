@@ -56,6 +56,7 @@ struct Node {
 };
 
 int main() {
+  srand(0);
   int n;
   cin >> n;
   unordered_map<string, Node*> memo;
