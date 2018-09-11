@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// globals
-vector<vector<char>> grid(9, vector<char>(9));
+char grid[9][9];
+char modified[9][9];
 
 bool no_duplicates_in_rows() {
   bool ok = true;
@@ -63,7 +63,7 @@ bool no_duplicates_in_boxes() {
   return ok;
 }
 
-void cross(vector<vector<char>> &modified, int n) {
+void cross(int n) {
   for (int r = 0; r < 9; r++) {
     for (int c = 0; c < 9; c++) {
       if (modified[r][c] - '0' == n) {
@@ -91,7 +91,7 @@ void cross(vector<vector<char>> &modified, int n) {
   }
 }
 
-int hatch(vector<vector<char>> &modified, int n) {
+int hatch(int n) {
   for (int r = 0; r < 9; r += 3) {
     for (int c = 0; c < 9; c += 3) {
       int nr, nc;
@@ -133,9 +133,14 @@ bool solve() {
   while (more) {
     more = false;
     for (int n = 1; n < 10; n++) {
-      auto modified(grid);
-      cross(modified, n);
-      int result = hatch(modified, n);
+      // reset
+      for (int i = 0; i < 9; i++) {
+        for (int j = 0; j < 9; j++) {
+          modified[i][j] = grid[i][j];
+        }
+      }
+      cross(n);
+      int result = hatch(n);
       if (result == 1) {
         more = true;
       } else if (result == -1) {
@@ -149,7 +154,10 @@ bool solve() {
 int main() {
   for (int r = 0; r < 9; r++) {
     for (int c = 0; c < 9; c++) {
-      cin >> grid[r][c];
+      char temp;
+      cin >> temp;
+      grid[r][c] = temp;
+      modified[r][c] = temp;
     }
   }
   bool solved = solve();
