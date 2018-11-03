@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #define PI acos(-1.0)
+#define EPS 1e-10
 using namespace std;
 
 int main() {
@@ -11,7 +12,7 @@ int main() {
     }
     double A, v, x, y;
     double low = 0, high = 90;
-    while (abs(high - low) > 1e-8) {
+    while (high - low > EPS) {
       A = (low + high) / 2;
       x = b / (2 * sin(A * PI / 180));
       y = a / (2 * cos(A * PI / 180));
