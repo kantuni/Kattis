@@ -8,10 +8,10 @@ int main() {
   for (int i = 0; i < n; i++) {
     int m, s;
     cin >> m >> s;
-    num += s - m * 60;
+    num += s;
     denom += m * 60;
   }
-  double ans = 1. * (num + denom) / denom;
+  double ans = 1. * num / denom;
   if (ans > 1) {
     cout << fixed << setprecision(8);
     cout << ans << "\n";
