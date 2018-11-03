@@ -6,10 +6,10 @@ int main() {
   cin >> s;
   cout << s << ":\n";
   for (int k = 1; k < s - 1; k++) {
-    int total = 0;
     if (s % k == 0 and k != 1) {
       cout << k << "," << k << "\n";
     }
+    int total = 0;
     for (int i = 0; total < s; i++) {
       if (i % 2 == 0) {
         total += k + 1;
