@@ -5,18 +5,19 @@ int main() {
   int l, h;
   cin >> l >> h;
   int ans = 0;
+  int f[10];
   for (int i = l; i < h + 1; i++) {
-    int j = i;
-    set<int> s;
-    while (j > 0) {
-      int d = j % 10;
-      if (d == 0 or i % d > 0) {
+    fill(f, f + 10, 0);
+    int n = i;
+    while (n > 0) {
+      int d = n % 10;
+      if (d == 0 or f[d] > 0 or i % d > 0) {
         break;
       }
-      s.insert(d);
-      j /= 10;
+      f[d]++;
+      n /= 10;
     }
-    if (j == 0 and s.size() == 6) {
+    if (n == 0) {
       ans++;
     }
   }
