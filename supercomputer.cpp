@@ -46,7 +46,7 @@ int main() {
   int n, k;
   cin >> n >> k;
   values.resize(n, 0);
-  tree.resize(2 * n - 1);
+  tree.resize(2 * n - 1, 0);
   build(0, 0, n - 1);
   while (k--) {
     char cmd;
@@ -54,16 +54,12 @@ int main() {
     if (cmd == 'F') {
       int index;
       cin >> index;
-      if (values[index - 1] == 0) {
-        update(0, 0, n - 1, index - 1, 1);
-      } else {
-        update(0, 0, n - 1, index - 1, -1);
-      }
+      int flip = values[index - 1] ? -1 : 1;
+      update(0, 0, n - 1, index - 1, flip);
     } else {
       int l, r;
       cin >> l >> r;
-      int ans = query(0, 0, n - 1, l - 1, r - 1);
-      cout << ans << "\n";
+      cout << query(0, 0, n - 1, l - 1, r - 1) << "\n";
     }
   }
   return 0;
