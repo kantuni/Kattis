@@ -16,8 +16,8 @@ void build(int node, int start, int end) {
 
 void update(int node, int start, int end, int index, int value) {
   if (start == end) {
-    values[index] += value;
-    tree[node] += value;
+    values[index] = value;
+    tree[node] = value;
   } else {
     int mid = (start + end) / 2;
     if (index >= start and index <= mid) {
@@ -54,8 +54,7 @@ int main() {
     if (cmd == 'F') {
       int index;
       cin >> index;
-      int flip = values[index - 1] ? -1 : 1;
-      update(0, 0, n - 1, index - 1, flip);
+      update(0, 0, n - 1, index - 1, !values[index - 1]);
     } else {
       int l, r;
       cin >> l >> r;
