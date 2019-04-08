@@ -29,7 +29,7 @@ int main() {
       }
     }
     cout << fixed << setprecision(9);
-    cout << d << "\n";
+    cout << d << endl;
   }
   return 0;
 }
