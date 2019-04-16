@@ -22,15 +22,13 @@ int main() {
     }
   }
   int m = max({ac, bc, gc});
-  cout << m << "\n";
+  cout << m << endl;
   if (ac == m) {
-    cout << "Adrian" << "\n";
-  }
-  if (bc == m) {
-    cout << "Bruno" << "\n";
-  }
-  if (gc == m) {
-    cout << "Goran" << "\n";
+    cout << "Adrian" << endl;
+  } else if (bc == m) {
+    cout << "Bruno" << endl;
+  } else {
+    cout << "Goran" << endl;
   }
   return 0;
 }
