@@ -11,15 +11,9 @@ int main() {
   string g = "CCAABB";
   int ac = 0, bc = 0, gc = 0;
   for (int i = 0; i < n; i++) {
-    if (ans[i] == a[i % 3]) {
-      ac++;
-    }
-    if (ans[i] == b[i % 4]) {
-      bc++;
-    }
-    if (ans[i] == g[i % 6]) {
-      gc++;
-    }
+    if (ans[i] == a[i % 3]) ac++;
+    if (ans[i] == b[i % 4]) bc++;
+    if (ans[i] == g[i % 6]) gc++;
   }
   int m = max({ac, bc, gc});
   cout << m << endl;
