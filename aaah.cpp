@@ -5,9 +5,9 @@ int main() {
   string john, doc;
   cin >> john >> doc;
   if (john.size() >= doc.size()) {
-    cout << "go" << "\n";
+    cout << "go" << endl;
   } else {
-    cout << "no" << "\n";
+    cout << "no" << endl;
   }
   return 0;
 }
