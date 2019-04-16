@@ -8,7 +8,7 @@ struct Problem {
 };
 
 int main() {
-  unordered_map<char, Problem> memo;
+  map<char, Problem> memo;
   while (true) {
     int m;
     cin >> m;
@@ -37,7 +37,7 @@ int main() {
       total += kv.second.m + (20 * kv.second.w);
       solved++;
     }
-  }  
+  }
   cout << solved << " " << total << endl;
   return 0;
 }
