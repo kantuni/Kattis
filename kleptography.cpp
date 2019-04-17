@@ -11,6 +11,6 @@ int main() {
   for (int i = m - 1; i > n - 1; i--) {
     a[i - n] = 'a' + (26 + b[i] - a[i]) % 26;
   }
-  cout << a << "\n";
+  cout << a << endl;
   return 0;
 }
