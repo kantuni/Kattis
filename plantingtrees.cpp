@@ -9,15 +9,14 @@ int main() {
     cin >> t[i];
   }
   sort(t.rbegin(), t.rend());
-  int left = t[0], ans = 1;
+  int l = t[0], ans = 1;
   for (int i = 1; i < n; i++) {
-    left--;
-    ans++;
-    if (t[i] > left) {
-      left = t[i];
+    l--, ans++;
+    if (t[i] > l) {
+      l = t[i];
     }
   }
-  ans += left;
-  cout << ans + 1 << "\n";
+  ans += l;
+  cout << ans + 1 << endl;
   return 0;
 }
