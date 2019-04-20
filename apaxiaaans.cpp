@@ -10,6 +10,6 @@ int main() {
       compact += string(1, name[i]);
     }
   }
-  cout << compact << "\n";
+  cout << compact << endl;
   return 0;
 }
