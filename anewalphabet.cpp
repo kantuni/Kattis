@@ -17,6 +17,6 @@ int main() {
       cout << l;
     }
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }
