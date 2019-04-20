@@ -13,7 +13,7 @@ int main() {
     for (int j = l - 1; j < r; j++) {
       color[j]++;
     }
-    ranges.push_back(make_pair(l - 1, r - 1));
+    ranges.push_back({l - 1, r - 1});
   }
   set<int> rooms;
   for (auto range: ranges) {
@@ -36,6 +36,6 @@ int main() {
       rooms.insert(mindex);
     }
   }
-  cout << rooms.size() << "\n";
+  cout << rooms.size() << endl;
   return 0;
 }
