@@ -10,6 +10,6 @@ int main() {
       abbr += string(1, l[i + 1]);
     }
   }
-  cout << abbr << "\n";
+  cout << abbr << endl;
   return 0;
 }
