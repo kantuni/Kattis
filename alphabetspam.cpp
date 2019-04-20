@@ -16,9 +16,10 @@ int main() {
       sym++;
     }
   }
-  printf("%.7f\n", 1.0 * w / s.size());
-  printf("%.7f\n", 1.0 * lc / s.size());
-  printf("%.7f\n", 1.0 * uc / s.size());
-  printf("%.7f\n", 1.0 * sym / s.size());
+  cout << fixed << setprecision(7);
+  cout << 1.0 * w / s.size() << endl;
+  cout << 1.0 * lc / s.size() << endl;
+  cout << 1.0 * uc / s.size() << endl;
+  cout << 1.0 * sym / s.size() << endl;
   return 0;
 }
