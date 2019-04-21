@@ -15,9 +15,9 @@ int main() {
     }
   }
   if (ok) {
-    cout << "makes sense" << "\n";
+    cout << "makes sense" << endl;
   } else {
-    cout << "something is fishy" << "\n";
+    cout << "something is fishy" << endl;
   }
   return 0;
 }
