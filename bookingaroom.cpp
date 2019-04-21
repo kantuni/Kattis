@@ -14,12 +14,12 @@ int main() {
   for (int i = 0; i < r; i++) {
     if (used[i] == 0) {
       empty = true;
-      cout << i + 1 << "\n";
+      cout << i + 1 << endl;
       break;
     }
   }
   if (!empty) {
-    cout << "too late" << "\n";
+    cout << "too late" << endl;
   }
   return 0;
 }
