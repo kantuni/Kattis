@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  int correct[6] = {1, 1, 2, 2, 2, 8};
+  int correct[] = {1, 1, 2, 2, 2, 8};
   for (int i = 0; i < 6; i++) {
     int n;
     cin >> n;
@@ -11,6 +11,6 @@ int main() {
       cout << " ";
     }
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }
