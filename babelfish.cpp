@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  unordered_map<string, string> memo;
+  map<string, string> memo;
   bool end = false;
   while (true) {
     string line;
@@ -24,9 +24,9 @@ int main() {
       string t;
       iss >> t;
       if (!memo.count(t)) {
-        cout << "eh" << "\n";
+        cout << "eh" << endl;
       } else {
-        cout << memo[t] << "\n";
+        cout << memo[t] << endl;
       }
     }
   }
