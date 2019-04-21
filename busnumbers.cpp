@@ -31,6 +31,6 @@ int main() {
     }
   }
   print(start, end);
-  cout << "\n";
+  cout << endl;
   return 0;
 }
