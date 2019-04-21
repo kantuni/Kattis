@@ -29,8 +29,9 @@ int main() {
         ax = (ax + m > w - 1) ? w - 1 : ax + m;
       }
     }
-    cout << "Robot thinks " << rx << " " << ry << "\n";
-    cout << "Actually at " << ax << " " << ay << "\n\n";
+    cout << "Robot thinks " << rx << " " << ry << endl;
+    cout << "Actually at " << ax << " " << ay << endl;
+    cout << endl;
   }
   return 0;
 }
