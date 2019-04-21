@@ -12,6 +12,6 @@ int main() {
       ans.pop_back();
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
