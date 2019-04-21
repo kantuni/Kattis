@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  unordered_map<char, int> d, nd;
+  map<char, int> d, nd;
   d['A'] = 11;  nd['A'] = 11;
   d['K'] = 4;   nd['K'] = 4;
   d['Q'] = 3;   nd['Q'] = 3;
@@ -26,6 +26,6 @@ int main() {
       ans += nd[num];
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
