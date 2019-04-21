@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int p, n;
   cin >> p >> n;
-  unordered_set<string> parts;
+  set<string> parts;
   int found = -1;
   for (int i = 1; i <= n; i++) {
     string part;
@@ -15,9 +15,9 @@ int main() {
     }
   }
   if (found > 0) {
-    cout << found << "\n";
+    cout << found << endl;
   } else {
-    cout << "paradox avoided" << "\n";
+    cout << "paradox avoided" << endl;
   }
   return 0;
 }
