@@ -14,7 +14,7 @@ int main() {
     double A = atan(y / x) * 180 / PI;
     double v = hypot(x, y) / s;
     cout << fixed << setprecision(2);
-    cout << A << " " << v << "\n";
+    cout << A << " " << v << endl;
   }
   return 0;
 }
