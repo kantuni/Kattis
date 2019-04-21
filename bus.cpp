@@ -7,7 +7,7 @@ int main() {
   while (t--) {
     int k;
     cin >> k;
-    cout << (int) pow(2, k) - 1 << "\n";
+    cout << (int) pow(2, k) - 1 << endl;
   }
   return 0;
 }
