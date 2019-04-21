@@ -13,6 +13,6 @@ int main() {
       denom++;
     }
   }
-  cout << num / denom << "\n";
+  cout << num / denom << endl;
   return 0;
 }
