@@ -19,9 +19,9 @@ int main() {
     }
   }
   if (ans == -1) {
-    cout << "none" << "\n";
+    cout << "none" << endl;
   } else {
-    cout << ans << "\n";
+    cout << ans << endl;
   }
   return 0;
 }
