@@ -11,11 +11,8 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    if (n < 5) {
-      cout << f(n) % 10 << endl;
-    } else {
-      cout << 0 << endl;
-    }
+    int ans = (n < 5) ? f(n) % 10 : 0;
+    cout << ans << endl;
   }
   return 0;
 }
