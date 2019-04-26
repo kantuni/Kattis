@@ -22,6 +22,6 @@ int main() {
       ans += 3 * c;
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
