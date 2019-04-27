@@ -9,7 +9,7 @@ int main() {
     cin >> n;
     queue<pair<int, int>> q;
     for (int i = 0; i < n; i++) {
-      q.push(make_pair(i, -1));
+      q.push({i, -1});
     }
     vector<pair<int, int>> perm(n);
     for (int i = 1; i <= n; i++) {
@@ -25,7 +25,7 @@ int main() {
     for (auto p: perm) {
       cout << p.second << " ";
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }
