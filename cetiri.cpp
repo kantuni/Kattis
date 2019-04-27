@@ -14,11 +14,11 @@ int main() {
     swap(b, c);
   }
   if (c - b == b - a) {
-    cout << c + c - b << "\n";
+    cout << c + c - b << endl;
   } else if (c - b > b - a) {
-    cout << b + b - a << "\n";
+    cout << b + b - a << endl;
   } else {
-    cout << a + c - b << "\n";
+    cout << a + c - b << endl;
   }
   return 0;
 }
