@@ -15,7 +15,7 @@ int main() {
     }
   }
   for (auto cw: s) {
-    cout << cw << "\n";
+    cout << cw << endl;
   }
   return 0;
 }
