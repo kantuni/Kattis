@@ -30,8 +30,8 @@ int main() {
       }
     }
   }
-  for (auto c: counts) {
-    cout << c << "\n";
+  for (auto count: counts) {
+    cout << count << endl;
   }
   return 0;
 }
