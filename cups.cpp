@@ -17,7 +17,7 @@ int main() {
     }
   }
   for (auto c: cups) {
-    cout << c.second << "\n";
+    cout << c.second << endl;
   }
   return 0;
 }
