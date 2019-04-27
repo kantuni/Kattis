@@ -7,7 +7,7 @@ int main() {
     if (a == 0 and b == 0) {
       break;
     }
-    unordered_map<long long, long long> fa;
+    map<long long, long long> fa;
     long long ac = a, acnt = 0;
     fa[ac] = 0;
     while (ac != 1) {
@@ -32,7 +32,7 @@ int main() {
     long long sa = fa[c], sb = bcnt;
     cout << a << " needs " << sa << " steps, ";
     cout << b << " needs " << sb << " steps, ";
-    cout << "they meet at " << c << "\n";
+    cout << "they meet at " << c << endl;
   }
   return 0;
 }
