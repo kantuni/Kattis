@@ -6,9 +6,9 @@ int main() {
   cin >> n;
   int ans = 0;
   while (n--) {
-    int temp;
-    cin >> temp;
-    if (temp < 0) {
+    int tmp;
+    cin >> tmp;
+    if (tmp < 0) {
       ans++;
     }
   }
