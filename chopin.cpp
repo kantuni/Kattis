@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  unordered_map<string, string> memo;
+  map<string, string> memo;
   memo["A#"] = "Bb";
   memo["Bb"] = "A#";
   memo["C#"] = "Db";
@@ -17,10 +17,10 @@ int main() {
   int t = 1;
   while (cin >> note >> tonality) {
     cout << "Case " << t++ << ": ";
-    if (memo.count(note) > 0) {
-      cout << memo[note] << " " << tonality << "\n";
+    if (memo.count(note)) {
+      cout << memo[note] << " " << tonality << endl;
     } else {
-      cout << "UNIQUE" << "\n";
+      cout << "UNIQUE" << endl;
     }
   }
   return 0;
