@@ -8,7 +8,7 @@ int main() {
     int k, n;
     cin >> k >> n;
     int ans = n * (n + 3) / 2;
-    cout << k << " " << ans << "\n";
+    cout << k << " " << ans << endl;
   }
   return 0;
 }
