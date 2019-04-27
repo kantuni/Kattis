@@ -166,10 +166,10 @@ int main() {
       for (int c = 0; c < 9; c++) {
         cout << grid[r][c];
       }
-      cout << "\n";
+      cout << endl;
     }
   } else {
-    cout << "ERROR" << "\n";
+    cout << "ERROR" << endl;
   }
   return 0;
 }
