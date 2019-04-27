@@ -20,15 +20,15 @@ int main() {
     }
     sort(red.rbegin(), red.rend());
     sort(blue.rbegin(), blue.rend());
-    int length = 0;
+    int len = 0;
     for (int j = 0; j < min(red.size(), blue.size()); j++) {
-      length += red[j] + blue[j] - 1;
+      len += red[j] + blue[j] - 1;
       if (j != 0) {
-        length -= 1;
+        len -= 1;
       }
     }
     cout << "Case #" << i << ": ";
-    cout << (length - 1 >= 0 ? length - 1 : 0) << endl;
+    cout << (len - 1 >= 0 ? len - 1 : 0) << endl;
   }
   return 0;
 }
