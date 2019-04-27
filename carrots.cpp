@@ -6,6 +6,6 @@ int main() {
   cin >> n >> p;
   string nonsense;
   while (cin >> nonsense) {}
-  cout << p << "\n";
+  cout << p << endl;
   return 0;
 }
