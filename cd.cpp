@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
   while (true) {
-    unordered_set<int> jack;
+    set<int> jack;
     int n, m;
     cin >> n >> m;
     if (n == 0 and m == 0) {
@@ -22,7 +22,7 @@ int main() {
         cnt++;
       }
     }
-    cout << cnt << "\n";
+    cout << cnt << endl;
   }
   return 0;
 }
