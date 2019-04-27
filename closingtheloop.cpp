@@ -28,7 +28,7 @@ int main() {
       }
     }
     cout << "Case #" << i << ": ";
-    cout << (length - 1 >= 0 ? length - 1 : 0) << "\n";
+    cout << (length - 1 >= 0 ? length - 1 : 0) << endl;
   }
   return 0;
 }
