@@ -24,6 +24,6 @@ int main() {
     }
     start = (calendar[i][dinm[i] - 1] + 1) % 7;
   }
-  cout << dofw[calendar[m - 1][d - 1]] << "\n";
+  cout << dofw[calendar[m - 1][d - 1]] << endl;
   return 0;
 }
