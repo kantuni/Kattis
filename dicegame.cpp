@@ -11,18 +11,18 @@ int main() {
   int emin = a3 + a4;
   int emax = b3 + b4;
   if (gmin > emax) {
-    cout << "Gunnar" << "\n";
+    cout << "Gunnar" << endl;
   } else if (emin > gmax) {
-    cout << "Emma" << "\n";
+    cout << "Emma" << endl;
   } else {
     int l = max(gmin, emin) - min(gmin, emin);
     int r = max(gmax, emax) - min(gmax, emax);
     if (r == l) {
-      cout << "Tie" << "\n";
+      cout << "Tie" << endl;
     } else if (r > l) {
-      cout << (max(gmax, emax) == gmax ? "Gunnar" : "Emma") << "\n";
+      cout << (max(gmax, emax) == gmax ? "Gunnar" : "Emma") << endl;
     } else {
-      cout << (min(gmin, emin) == gmin ? "Emma" : "Gunnar") << "\n";
+      cout << (min(gmin, emin) == gmin ? "Emma" : "Gunnar") << endl;
     }
   }
   return 0;
