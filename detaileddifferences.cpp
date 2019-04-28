@@ -7,8 +7,8 @@ int main() {
   while (n--) {
     string a, b;
     cin >> a >> b;
-    cout << a << "\n";
-    cout << b << "\n";
+    cout << a << endl;
+    cout << b << endl;
     for (int i = 0; i < a.size(); i++) {
       if (a[i] == b[i]) {
         cout << ".";
@@ -16,7 +16,7 @@ int main() {
         cout << "*";
       }
     }
-    cout << "\n\n";
+    cout << endl << endl;
   }
   return 0;
 }
