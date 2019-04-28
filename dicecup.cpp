@@ -14,7 +14,7 @@ int main() {
   }
   for (int i = 0; i < res.size(); i++) {
     if (res[i] == hp) {
-      cout << i << "\n";
+      cout << i << endl;
     }
   }
   return 0;
