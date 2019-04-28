@@ -21,6 +21,6 @@ int main() {
   for (int i = 0; i < drm.size() / 2; i++) {
     l[i] = (l[i] - 'A' + r[i] - 'A') % 26 + 'A';
   }
-  cout << l << "\n";
+  cout << l << endl;
   return 0;
 }
