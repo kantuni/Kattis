@@ -8,22 +8,23 @@ int main() {
     if (m == 0) {
       break;
     }
-    int cw = 0, ch = 0, mw = 0, mh = 0;
+    int cw = 0, ch = 0;
+    int mw = 0, ph = 0;
     while (true) {
       int w, h;
       cin >> w >> h;
       if (w == -1 and h == -1) {
-        cout << mw << " x " << mh + ch << endl;
-        cw = 0, ch = 0, mh = 0, mw = 0;
+        cout << mw << " x " << ph + ch << endl;
+        cw = 0, ch = 0;
+        mw = 0, ph = 0;
         break;
       }
       if (cw + w <= m) {
         cw += w;
         ch = max(ch, h);
       } else {
-        mh += ch;
-        cw = w;
-        ch = h;
+        ph += ch;
+        cw = w, ch = h;
       }
       mw = max(mw, cw);
     }
