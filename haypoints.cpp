@@ -13,18 +13,13 @@ int main() {
   }
   while (n--) {
     int ans = 0;
-    while (true) {
-      string line;
-      getline(cin, line);
-      if (line == ".") {
+    string w;
+    while (cin >> w) {
+      if (w == ".") {
         cout << ans << endl;  
         break;
       }
-      stringstream ss(line);
-      string w;
-      while (ss >> w) {
-        ans += memo[w];
-      }
+      ans += memo[w];
     }
   }
   return 0;
