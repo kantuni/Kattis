@@ -11,23 +11,25 @@ int main() {
   // (x1, y1), (x1, y2), (x2, y1), (x2, y2)
   // where x1 ≥ x2, y1 ≥ y2
   sort(coords.begin(), coords.end());
+  auto [x0, y0] = coords[0];
+  auto [x1, y1] = coords[1];
+  auto [x2, y2] = coords[2];
   pair<int, int> ans;
-  int dx, dy;
-  if (coords[0].first == coords[1].first) {
-    dx = coords[2].first - coords[0].first;
-    dy = coords[1].second - coords[0].second;
-    if (coords[2].second == coords[0].second) {
-      ans = {coords[0].first + dx, coords[0].second + dy};
+  if (x0 == x1) {
+    int dx = x2 - x0;
+    int dy = y1 - y0;
+    if (y2 == y0) {
+      ans = make_pair(x0 + dx, y0 + dy);
     } else {
-      ans = {coords[0].first + dx, coords[0].second};
+      ans = make_pair(x0 + dx, y0);
     }
   } else {
-    dx = coords[2].first - coords[0].first;
-    dy = coords[2].second - coords[1].second;
-    if (coords[2].second == coords[0].second) {
-      ans = {coords[2].first - dx, coords[2].second - dy};
+    int dx = x2 - x0;
+    int dy = y2 - y1;
+    if (y2 == y0) {
+      ans = make_pair(x2 - dx, y2 - dy);
     } else {
-      ans = {coords[2].first - dx, coords[2].second};
+      ans = make_pair(x2 - dx, y2);
     }
   }
   cout << ans.first << " " << ans.second << endl;
