@@ -13,7 +13,7 @@ int main() {
       cin >> city;
       s.insert(city);
     }
-    cout << s.size() << "\n";
+    cout << s.size() << endl;
   }
   return 0;
 }
