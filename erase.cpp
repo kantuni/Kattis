@@ -19,9 +19,9 @@ int main() {
     }
   }
   if (failed) {
-    cout << "Deletion failed" << "\n";
+    cout << "Deletion failed" << endl;
   } else {
-    cout << "Deletion succeeded" << "\n";
+    cout << "Deletion succeeded" << endl;
   }
   return 0;
 }
