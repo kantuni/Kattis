@@ -10,6 +10,6 @@ int main() {
     e += 1.0 / f;
   }
   cout << fixed << setprecision(15);
-  cout << e << "\n";
+  cout << e << endl;
   return 0;
 }
