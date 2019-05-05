@@ -12,11 +12,11 @@ int main() {
     int y2 = stoi(d2.substr(0, 4));
     cout << name << " ";
     if (y1 >= 2010 or y2 >= 1991) {
-      cout << "eligible" << "\n";
+      cout << "eligible" << endl;
     } else if (courses >= 41) {
-      cout << "ineligible" << "\n";
+      cout << "ineligible" << endl;
     } else {
-      cout << "coach petitions" << "\n";
+      cout << "coach petitions" << endl;
     }
   }
   return 0;
