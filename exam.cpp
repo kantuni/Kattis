@@ -15,6 +15,6 @@ int main() {
     }
   }
   int ans = (k > same) ? me.size() - (k - same) : k + diff;
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
