@@ -21,7 +21,7 @@ int main() {
     while (dsum(p * n) != dsum(n)) {
       p++;
     }
-    cout << p << "\n";
+    cout << p << endl;
   }
   return 0;
 }
