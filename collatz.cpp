@@ -11,7 +11,7 @@ int main() {
     long long ac = a, acnt = 0;
     fa[ac] = 0;
     while (ac != 1) {
-      ac = (ac % 2) ? 3 * ac + 1 : ac / 2;
+      ac = (ac % 2 == 0) ? ac / 2 : 3 * ac + 1;
       acnt++;
       fa[ac] = acnt;
     }
@@ -21,7 +21,7 @@ int main() {
       c = b;
     } else {
       while (bc != 1) {
-        bc = (bc % 2) ? 3 * bc + 1 : bc / 2;
+        bc = (bc % 2 == 0) ? bc / 2 : 3 * bc + 1;
         bcnt++;
         if (fa.count(bc)) {
           c = bc;
