@@ -27,12 +27,12 @@ int main() {
   if (x.size() == 0) {
     cout << "YODA" << endl;
   } else {
-    cout << to_string(stoi(x))) << endl;
+    cout << to_string(stoi(x)) << endl;
   }
   if (y.size() == 0) {
     cout << "YODA" << endl;
   } else {
-    cout << to_string(stoi(y))) << endl;
+    cout << to_string(stoi(y)) << endl;
   }
   return 0;
 }
