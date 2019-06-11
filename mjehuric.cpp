@@ -13,7 +13,7 @@ int main() {
         for (int k = 0; k < a.size(); k++) {
           cout << a[k] << " ";
         }
-        cout << "\n";
+        cout << endl;
       }
     }
   }
