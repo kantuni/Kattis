@@ -9,7 +9,7 @@ int main() {
     string line;
     getline(cin, line);
     if (line.substr(0, 10) == "Simon says") {
-      cout << line.substr(10) << "\n";
+      cout << line.substr(10) << endl;
     }
   }
   return 0;
