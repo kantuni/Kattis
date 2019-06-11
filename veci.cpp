@@ -13,6 +13,6 @@ int main() {
       sm = xp;
     }
   } while (next_permutation(x.begin(), x.end()));
-  cout << (sm < 1e9 ? sm : 0) << "\n";
+  cout << (sm < 1e9 ? sm : 0) << endl;
   return 0;
 }
