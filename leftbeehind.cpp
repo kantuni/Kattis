@@ -9,13 +9,13 @@ int main() {
       break;
     }
     if (x + y == 13) {
-      cout << "Never speak again." << "\n";
+      cout << "Never speak again." << endl;
     } else if (y > x) {
-      cout << "Left beehind." << "\n";
+      cout << "Left beehind." << endl;
     } else if (x > y) {
-      cout << "To the convention." << "\n";
+      cout << "To the convention." << endl;
     } else {
-      cout << "Undecided." << "\n";
+      cout << "Undecided." << endl;
     }
   }
   return 0;
