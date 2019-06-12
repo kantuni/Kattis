@@ -16,7 +16,7 @@ int main() {
       M[i][j] = A[i / zr][j / zc];
       cout << M[i][j];
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }
