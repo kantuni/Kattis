@@ -19,6 +19,6 @@ int main() {
       curr -= p;
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
