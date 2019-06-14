@@ -22,7 +22,7 @@ int main() {
     }
     cout << "List " << ln << ":" << "\n";
     for (auto m: memo) {
-      cout << m.first << " | " << m.second << "\n";
+      cout << m.first << " | " << m.second << endl;
     }
     ln++;
   }
