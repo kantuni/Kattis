@@ -14,6 +14,6 @@ int main() {
       k = k % 8 + 1;
     }
   }
-  cout << k << "\n";
+  cout << k << endl;
   return 0;
 }
