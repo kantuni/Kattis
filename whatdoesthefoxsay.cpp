@@ -31,7 +31,7 @@ int main() {
         cout << s << " ";
       }
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }
