@@ -14,7 +14,7 @@ int main() {
     while (iss >> sound) {
       sounds.push_back(sound);
     }
-    unordered_set<string> known;
+    set<string> known;
     while (true) {
       string line;
       getline(cin, line);
