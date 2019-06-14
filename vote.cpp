@@ -18,10 +18,10 @@ int main() {
     sort(votes.rbegin(), votes.rend());
     pair<int, int> v1 = votes[0], v2 = votes[1];
     if (v1.first == v2.first) {
-      cout << "no winner" << "\n";
+      cout << "no winner" << endl;
     } else {
       cout << (v1.first * 2 > sum ? "majority" : "minority");
-      cout << " winner " << v1.second << "\n";
+      cout << " winner " << v1.second << endl;
     }
   }
   return 0;
