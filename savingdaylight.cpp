@@ -17,7 +17,7 @@ int main() {
       hh2--;
     }
     cout << hh2 - hh1 << " hours ";
-    cout << (mm2 - mm1 + 60) % 60 << " minutes" << "\n";
+    cout << (mm2 - mm1 + 60) % 60 << " minutes" << endl;
   }
   return 0;
 }
