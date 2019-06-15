@@ -7,7 +7,7 @@ int main() {
   int ans = 0;
   int f[10];
   for (int i = l; i < h + 1; i++) {
-    fill(f, f + 10, 0);
+    memset(f, 0, sizeof f);
     int n = i;
     while (n > 0) {
       int d = n % 10;
