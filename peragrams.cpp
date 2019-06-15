@@ -14,6 +14,6 @@ int main() {
       miss++;
     }
   }
-  cout << (miss > 1 ? miss - 1 : 0) << "\n";
+  cout << (miss > 1 ? miss - 1 : 0) << endl;
   return 0;
 }
