@@ -7,6 +7,6 @@ int main() {
     cin >> steps[i];
   }
   sort(steps.begin(), steps.end());
-  cout << steps[0] * steps[2] << "\n";
+  cout << steps[0] * steps[2] << endl;
   return 0;
 }
