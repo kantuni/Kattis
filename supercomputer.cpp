@@ -58,7 +58,7 @@ int main() {
     } else {
       int l, r;
       cin >> l >> r;
-      cout << query(0, 0, n - 1, l - 1, r - 1) << "\n";
+      cout << query(0, 0, n - 1, l - 1, r - 1) << endl;
     }
   }
   return 0;
