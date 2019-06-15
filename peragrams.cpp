@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   string w;
   cin >> w;
-  vector<int> f(26, 0);
+  vector<int> f(26);
   for (char c: w) {
     f[c - 'a']++;
   }
