@@ -19,6 +19,6 @@ int main() {
   for (auto s: space) {
     cout << s << " ";
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }
