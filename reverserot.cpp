@@ -20,7 +20,7 @@ int main() {
     }
     string m;
     cin >> m;
-    cout << encrypt(m, n) << "\n";
+    cout << encrypt(m, n) << endl;
   }
   return 0;
 }
