@@ -91,7 +91,7 @@ int main() {
     string s;
     int k;
     cin >> s >> k;
-    cout << memo[s]->at(k) << "\n";
+    cout << memo[s]->at(k) << endl;
   }
   return 0;
 }
