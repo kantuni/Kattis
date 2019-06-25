@@ -37,7 +37,7 @@ int main() {
     used[best] = true;
   }
   for (int i = 0; i < n; i++) {
-    cout << tour[i] << "\n";
+    cout << tour[i] << endl;
   }
   return 0;
 }
