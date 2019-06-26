@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// globals
 vector<pair<double, double>> points;
 
 double dist(int i, int j) {
