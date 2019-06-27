@@ -14,7 +14,7 @@ int main() {
   }
   for (int i = 1; i < n; i++) {
     int d = gcd(r[0], r[i]);
-    cout << r[0] / d << "/" << r[i] / d << "\n";
+    cout << r[0] / d << "/" << r[i] / d << endl;
   }
   return 0;
 }
