@@ -13,7 +13,7 @@ int main() {
     }
     for (int i = 1; i < g; i++) {
       if (gnomes[i] != gnomes[i - 1] + 1) {
-        cout << i + 1 << "\n";
+        cout << i + 1 << endl;
         break;
       }
     }
