@@ -16,6 +16,6 @@ int main() {
   while (n % dsum(n) > 0) {
     n++;
   }
-  cout << n << "\n";
+  cout << n << endl;
   return 0;
 }
