@@ -13,9 +13,9 @@ int main() {
     t = x1 / (v0 * cos(theta * PI / 180.0));
     y = x1 * tan(theta * PI / 180.0) - 0.5 * g * t * t;
     if (y - h1 - 1 > EPS and h2 - y - 1 > EPS) {
-      cout << "Safe" << "\n";
+      cout << "Safe" << endl;
     } else {
-      cout << "Not Safe" << "\n";
+      cout << "Not Safe" << endl;
     }
   }
   return 0;
