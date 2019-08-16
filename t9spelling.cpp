@@ -34,7 +34,7 @@ int main() {
         m += t9[line[i] - 'a'];
       }
     }
-    cout << "Case #" << t++ << ": " << m << "\n";
+    cout << "Case #" << t++ << ": " << m << endl;
   }
   return 0;
 }
