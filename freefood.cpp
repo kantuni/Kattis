@@ -16,6 +16,6 @@ int main() {
   for (int i = 0; i < d.size(); i++) {
     ans += d[i];
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
