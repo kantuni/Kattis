@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
-  vector<int> d(365, 0);
+  vector<int> d(365);
   while (n--) {
     int s, t;
     cin >> s >> t;
