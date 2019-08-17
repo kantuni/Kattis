@@ -9,13 +9,13 @@ int main() {
     string line;
     getline(cin, line);
     if (line == "P=NP") {
-      cout << "skipped" << "\n";
+      cout << "skipped" << endl;
     } else {
       istringstream iss(line);
       int a, b;
       char op;
       iss >> a >> op >> b;
-      cout << a + b << "\n";
+      cout << a + b << endl;
     }
   }
   return 0;
