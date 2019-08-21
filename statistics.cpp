@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define INF (int) 1e9
 using namespace std;
 
 int main() {
@@ -8,19 +9,16 @@ int main() {
     istringstream iss(line);
     int n;
     iss >> n;
-    vector<int> X(n);
-    int min = 1e7, max = -1e7;
+    vector<int> x(n);
+    int mn = INF, mx = -INF;
     for (int i = 0; i < n; i++) {
-      iss >> X[i];
-      if (X[i] < min) {
-        min = X[i];
-      }
-      if (X[i] > max) {
-        max = X[i];
-      }
+      iss >> x[i];
+      mn = min(mn, x[i]);
+      mx = max(mx, x[i]);
     }
     cout << "Case " << t << ": ";
-    cout << min << " " << max << " " << max - min << "\n";
+    cout << mn << " " << mx << " ";
+    cout << mx - mn << endl;
     t++;
   }
   return 0;
