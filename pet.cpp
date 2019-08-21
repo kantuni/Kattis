@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  int imax, max = 0;
+  int imx, mx = 0;
   for (int i = 0; i < 5; i++) {
     int sum = 0;
     for (int j = 0; j < 4; j++) {
@@ -10,11 +10,11 @@ int main() {
       cin >> p;
       sum += p;
     }
-    if (sum > max) {
-      imax = i;
-      max = sum;
+    if (sum > mx) {
+      mx = sum;
+      imx = i;
     }
   }
-  cout << imax + 1 << " " << max << "\n";
+  cout << imx + 1 << " " << mx << endl;
   return 0;
 }
