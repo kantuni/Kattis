@@ -5,7 +5,7 @@ int main() {
   string s;
   cin >> s;
   int zoom = s.size();
-  int n = pow(2, zoom);
+  int n = 1 << zoom;
   int x = 0, y = 0;
   for (int i = 0; i < s.size(); i++) {
     if (s[i] == '1') {
@@ -18,6 +18,6 @@ int main() {
     }
     n /= 2;
   }
-  cout << zoom << " " << x << " " << y << "\n";
+  cout << zoom << " " << x << " " << y << endl;
   return 0;
 }
