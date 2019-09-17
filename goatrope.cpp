@@ -22,6 +22,6 @@ int main() {
   } else if (x < x1 and y > y2) {
     d = hypot(x1 - x, y - y2);
   }
-  cout << d << "\n";
+  cout << d << endl;
   return 0;
 }
