@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  unordered_map<string, string> to_morse({
+  map<string, string> to_morse({
     {"A", ".-"},    
     {"B", "-..."},  
     {"C", "-.-."},  
@@ -34,7 +34,7 @@ int main() {
     {".", "---."},  
     {"?", "----"},  
   });
-  unordered_map<string, string> from_morse({
+  map<string, string> from_morse({
     {".-",   "A"},
     {"-...", "B"},
     {"-.-.", "C"},
@@ -75,17 +75,17 @@ int main() {
       len += to_string(code.size());
     }
     reverse(len.begin(), len.end());
-    int next = 0;
+    int nxt = 0;
     for (char n: len) {
       int cnt = n - '0';
       string code;
       while (cnt--) {
-        code += mc[next];
-        next++;
+        code += mc[nxt];
+        nxt++;
       }
       m += from_morse[code];
     }
-    cout << m << "\n";
+    cout << m << endl;
   }
   return 0;
 }
