@@ -4,13 +4,13 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
-  unordered_set<string> memo;
-  string u, t;
+  set<string> memo;
   while (n--) {
+    string u, t;
     cin >> u >> t;
     if (!memo.count(u) and memo.size() < 12) {
       memo.insert(u);
-      cout << u << " " << t << "\n";
+      cout << u << " " << t << endl;
     }
   }
   return 0;
