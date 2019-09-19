@@ -18,6 +18,6 @@ int main() {
     team.insert(d[i].second);
     team.insert(h[i].second);
   }
-  cout << team.size() << "\n";
+  cout << team.size() << endl;
   return 0;
 }
