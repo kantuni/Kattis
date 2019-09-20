@@ -16,7 +16,7 @@ int main() {
     v1 = (x - 2 * h1) * (y - 2 * h1) * h1;
     v2 = (x - 2 * h2) * (y - 2 * h2) * h2;
     cout << fixed << setprecision(7);
-    cout << max(v1, v2) << "\n";
+    cout << max(v1, v2) << endl;
   }
   return 0;
 }
