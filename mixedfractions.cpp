@@ -9,7 +9,7 @@ int main() {
       break;
     }
     cout << num / denom << " ";
-    cout << num % denom << " / " << denom << "\n";
+    cout << num % denom << " / " << denom << endl;
   }
   return 0;
 }
