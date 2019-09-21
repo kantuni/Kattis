@@ -12,10 +12,9 @@ void dfs(int x, int y) {
   for (int i = 0; i < 8; i++) {
     int nx = x + dr[i];
     int ny = y + dc[i];
-    bool rok = nx >= 0 and nx < m;
-    bool cok = ny >= 0 and ny < n;
-    bool black = rok and cok and g[nx][ny] == '#';
-    bool available = rok and cok and color[nx][ny] == 0;
+    bool ok = (nx >= 0 and nx < m) and (ny >= 0 and ny < n);
+    bool black = ok and g[nx][ny] == '#';
+    bool available = ok and color[nx][ny] == 0;
     if (black and available) {
       dfs(nx, ny);
     }
