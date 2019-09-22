@@ -6,8 +6,12 @@ int main() {
   char cln;
   cin >> hh1 >> cln >> mm1 >> cln >> ss1;
   cin >> hh2 >> cln >> mm2 >> cln >> ss2;
-  mm2 = ss2 < ss1 ? mm2 - 1 : mm2;
-  hh2 = mm2 < mm1 ? hh2 - 1 : hh2;
+  if (ss2 < ss1) {
+    mm2--;
+  }
+  if (mm2 < mm1) {
+    hh2--;
+  }
   int hh = (hh2 - hh1 + 24) % 24;
   int mm = (mm2 - mm1 + 60) % 60;
   int ss = (ss2 - ss1 + 60) % 60;
