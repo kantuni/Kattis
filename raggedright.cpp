@@ -14,6 +14,6 @@ int main() {
     int m = lines[i].size();
     ans += pow(n - m, 2);
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
