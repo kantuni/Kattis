@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   string s;
   cin >> s;
-  unordered_set<string> memo;
+  set<string> memo;
   int ans = s.size();
   for (int len = 2; len < s.size(); len++) {
     for (int i = 0; i < s.size() - len; i++) {
@@ -26,6 +26,6 @@ int main() {
       ans = min(ans, newlen);
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
