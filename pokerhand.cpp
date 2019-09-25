@@ -10,6 +10,6 @@ int main() {
     memo[rank]++;
     ans = max(ans, memo[rank]);
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
