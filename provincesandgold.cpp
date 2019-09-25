@@ -23,6 +23,6 @@ int main() {
   if (v != "") {
     cout << v << " or ";
   }
-  cout << t << "\n";
+  cout << t << endl;
   return 0;
 }
