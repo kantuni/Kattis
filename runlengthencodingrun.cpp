@@ -35,9 +35,9 @@ int main() {
   string action, s;
   cin >> action >> s;
   if (action == "E") {
-    cout << encode(s) << "\n";
+    cout << encode(s) << endl;
   } else {
-    cout << decode(s) << "\n";
+    cout << decode(s) << endl;
   }
   return 0;
 }
