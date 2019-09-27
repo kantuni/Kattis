@@ -13,7 +13,7 @@ int main() {
     }
     for (int i = 0; i < nums.size(); i++) {
       if (sum - nums[i] == nums[i]) {
-        cout << nums[i] << "\n";
+        cout << nums[i] << endl;
         break;
       }
     }
