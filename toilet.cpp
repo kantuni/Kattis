@@ -42,8 +42,8 @@ int three(string s) {
 int main() {
   string s;
   cin >> s;
-  cout << one(s) << "\n";
-  cout << two(s) << "\n";
-  cout << three(s) << "\n";
+  cout << one(s) << endl;
+  cout << two(s) << endl;
+  cout << three(s) << endl;
   return 0;
 }
