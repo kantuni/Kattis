@@ -12,7 +12,7 @@ int main() {
       ssd += (n % b) * (n % b);
       n /= b;
     }
-    cout << k << " " << ssd << "\n";
+    cout << k << " " << ssd << endl;
   }
   return 0;
 }
