@@ -14,6 +14,7 @@ int main() {
       sm = xp;
     }
   } while (next_permutation(x.begin(), x.end()));
-  cout << (sm != INF ? sm : 0) << endl;
+  int ans = sm != INF ? sm : 0;
+  cout << ans << endl;
   return 0;
 }
