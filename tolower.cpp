@@ -11,9 +11,7 @@ int main() {
     for (int j = 0; j < t; j++) {
       string line;
       getline(cin, line);
-      if (!ok) {
-        continue;
-      } else {
+      if (ok) {
         string copy = line;
         for (int k = 1; k < copy.size(); k++) {
           copy[k] = tolower(copy[k]);
