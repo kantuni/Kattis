@@ -11,6 +11,6 @@ int main() {
     a = tmp;
     k--;
   }
-  cout << a << " " << b << "\n";
+  cout << a << " " << b << endl;
   return 0;
 }
