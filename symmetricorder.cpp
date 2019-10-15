@@ -9,7 +9,7 @@ int main() {
     if (n == 0) {
       break;
     }
-    cout << "SET " << sn << "\n";
+    cout << "SET " << sn << endl;
     stack<string> s;
     for (int i = 0; i < n; i++) {
       string name;
@@ -17,11 +17,11 @@ int main() {
       if (i % 2) {
         s.push(name);
       } else {
-        cout << name << "\n";
+        cout << name << endl;
       }
     }
     while (!s.empty()) {
-      cout << s.top() << "\n";
+      cout << s.top() << endl;
       s.pop();
     }
     sn++;
