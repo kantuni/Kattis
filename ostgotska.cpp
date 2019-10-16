@@ -12,9 +12,9 @@ int main() {
   }
   double p = 1.0 * aecnt / wcnt;
   if (p >= 0.4) {
-    cout << "dae ae ju traeligt va" << "\n";
+    cout << "dae ae ju traeligt va" << endl;
   } else {
-    cout << "haer talar vi rikssvenska" << "\n";
+    cout << "haer talar vi rikssvenska" << endl;
   }
   return 0;
 }
