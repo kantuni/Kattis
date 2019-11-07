@@ -5,14 +5,14 @@ int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   vector<int> h(6);
-  int sum = 0;
   for (int i = 0; i < 6; i++) {
     cin >> h[i];
-    sum += h[i];
   }
   int a, b;
   cin >> a >> b;
-  set<int, greater<int>> s1, s2;
+  int sum = accumulate(h.begin(), h.end(), 0);
+  set<int, greater<int>> s1;
+  set<int, greater<int>> s2(h.begin(), h.end());
   bool found = false;
   for (int i = 0; !found and i < 6; i++) {
     for (int j = i + 1; !found and j < 6; j++) {
@@ -20,18 +20,16 @@ int main() {
         if (i != j and j != k) {
           int tmp = h[i] + h[j] + h[k];
           if (tmp == a and sum - tmp == b) {
+            found = true;
             s1.insert(h[i]);
             s1.insert(h[j]);
             s1.insert(h[k]);
-            found = true;
+            s2.erase(h[i]);
+            s2.erase(h[j]);
+            s2.erase(h[k]);
           }
         }
       }
-    }
-  }
-  for (int i = 0; i < 6; i++) {
-    if (s1.count(h[i]) == 0) {
-      s2.insert(h[i]);
     }
   }
   for (auto item: s1) {
