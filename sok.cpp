@@ -13,6 +13,6 @@ int main() {
   cout << fixed << setprecision(6);
   cout << a - q * i << " ";
   cout << b - q * j << " ";
-  cout << c - q * k << "\n";
+  cout << c - q * k << endl;
   return 0;
 }

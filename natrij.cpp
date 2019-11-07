@@ -3,9 +3,9 @@ using namespace std;
 
 int main() {
   int hh1, mm1, ss1, hh2, mm2, ss2;
-  char colon;
-  cin >> hh1 >> colon >> mm1 >> colon >> ss1;
-  cin >> hh2 >> colon >> mm2 >> colon >> ss2;
+  char cln;
+  cin >> hh1 >> cln >> mm1 >> cln >> ss1;
+  cin >> hh2 >> cln >> mm2 >> cln >> ss2;
   if (ss2 < ss1) {
     mm2--;
   }

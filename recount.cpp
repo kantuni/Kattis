@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-  unordered_map<string, int> memo;
+  map<string, int> memo;
   while (true) {
     string vote;
     getline(cin, vote);
@@ -17,11 +17,11 @@ int main() {
   }
   sort(votes.rbegin(), votes.rend());
   if (votes[0] == votes[1]) {
-    cout << "Runoff!" << "\n";
+    cout << "Runoff!" << endl;
   } else {
     for (auto m: memo) {
       if (m.second == votes[0]) {
-        cout << m.first << "\n";
+        cout << m.first << endl;
         break;
       }
     }

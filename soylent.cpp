@@ -7,7 +7,7 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    cout << ceil(n / 400.0) << "\n";
+    cout << ceil(n / 400.0) << endl;
   }
   return 0;
 }

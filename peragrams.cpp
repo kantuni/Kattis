@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   string w;
   cin >> w;
-  vector<int> f(26, 0);
+  vector<int> f(26);
   for (char c: w) {
     f[c - 'a']++;
   }
@@ -14,6 +14,6 @@ int main() {
       miss++;
     }
   }
-  cout << (miss > 1 ? miss - 1 : 0) << "\n";
+  cout << (miss > 1 ? miss - 1 : 0) << endl;
   return 0;
 }

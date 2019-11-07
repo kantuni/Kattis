@@ -11,7 +11,7 @@ int main() {
       int a, b;
       cin >> a >> b;
     }
-    cout << n - 1 << "\n";
+    cout << n - 1 << endl;
   }
   return 0;
 }

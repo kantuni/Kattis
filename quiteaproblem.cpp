@@ -6,9 +6,9 @@ int main() {
   while (getline(cin, line)) {
     transform(line.begin(), line.end(), line.begin(), ::tolower);
     if (line.find("problem") != string::npos) {
-      cout << "yes" << "\n";
+      cout << "yes" << endl;
     } else {
-      cout << "no" << "\n";
+      cout << "no" << endl;
     }
   }
   return 0;

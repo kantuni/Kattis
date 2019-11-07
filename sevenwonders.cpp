@@ -17,10 +17,8 @@ int main() {
   int ans = t * t + c * c + g * g;
   while (t > 0 and c > 0 and g > 0) {
     ans += 7;
-    t--;
-    c--;
-    g--;
+    t--, c--, g--;
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }

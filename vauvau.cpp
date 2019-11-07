@@ -4,13 +4,13 @@ using namespace std;
 int main() {
   int a, b, c, d;
   cin >> a >> b >> c >> d;
-  vector<int> heroes(3);
-  cin >> heroes[0] >> heroes[1] >> heroes[2];
+  vector<int> h(3);
+  cin >> h[0] >> h[1] >> h[2];
   for (int i = 0; i < 3; i++) {
     int l1 = 0, r1 = a;
     bool a1 = true;
     while (true) {
-      if (l1 <= heroes[i] and heroes[i] <= r1) {
+      if (l1 <= h[i] and h[i] <= r1) {
         break;
       }
       l1 = r1;
@@ -20,7 +20,7 @@ int main() {
     int l2 = 0, r2 = c;
     bool a2 = true;
     while (true) {
-      if (l2 <= heroes[i] and heroes[i] <= r2) {
+      if (l2 <= h[i] and h[i] <= r2) {
         break;
       }
       l2 = r2;
@@ -28,11 +28,11 @@ int main() {
       a2 = !a2;
     }
     if (a1 and a2) {
-      cout << "both" << "\n";
+      cout << "both" << endl;
     } else if (a1 or a2) {
-      cout << "one" << "\n";
+      cout << "one" << endl;
     } else {
-      cout << "none" << "\n";
+      cout << "none" << endl;
     }
   }
   return 0;

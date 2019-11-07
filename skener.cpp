@@ -4,8 +4,7 @@ using namespace std;
 int main() {
   int r, c, zr, zc;
   cin >> r >> c >> zr >> zc;
-  vector<vector<char>> A(r, vector<char>(c));
-  vector<vector<char>> M(r * zr, vector<char>(c * zc));
+  char A[r][c];
   for (int i = 0; i < r; i++) {
     for (int j = 0; j < c; j++) {
       cin >> A[i][j];
@@ -13,10 +12,9 @@ int main() {
   }
   for (int i = 0; i < r * zr; i++) {
     for (int j = 0; j < c * zc; j++) {
-      M[i][j] = A[i / zr][j / zc];
-      cout << M[i][j];
+      cout << A[i / zr][j / zc];
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }

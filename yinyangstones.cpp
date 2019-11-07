@@ -19,6 +19,6 @@ int main() {
       i = 0;
     }
   }
-  cout << (s == "BW" or s == "WB" ? 1 : 0) << "\n";
+  cout << (s == "BW" or s == "WB" ? 1 : 0) << endl;
   return 0;
 }

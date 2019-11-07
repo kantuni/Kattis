@@ -5,7 +5,7 @@ int main() {
   int n;
   cin >> n;
   for (int i = 1; i <= n; i++) {
-    cout << i << " Abracadabra" << "\n";
+    cout << i << " Abracadabra" << endl;
   }
   return 0;
 }

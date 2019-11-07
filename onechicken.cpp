@@ -7,11 +7,11 @@ int main() {
   if (m > n) {
     cout << "Dr. Chaz will have " << to_string(m - n);
     cout << (m - n == 1 ? " piece" : " pieces");
-    cout << " of chicken left over!" << "\n";
+    cout << " of chicken left over!" << endl;
   } else {
     cout << "Dr. Chaz needs " << to_string(n - m);
     cout << " more " << (n - m == 1 ? "piece" : "pieces");
-    cout << " of chicken!" << "\n";
+    cout << " of chicken!" << endl;
   }
   return 0;
 }

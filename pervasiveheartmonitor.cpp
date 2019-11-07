@@ -7,9 +7,9 @@ int main() {
     istringstream iss(line);
     double average = 0.0;
     int n = 0;
-    string name = "", word;
+    string name, word;
     while (iss >> word) {
-      char first = word[0];
+      char first = word.front();
       if (isalpha(first)) {
         name += " " + word;
       } else {
@@ -18,7 +18,7 @@ int main() {
       }
     }
     cout << fixed << setprecision(6);
-    cout << average / n << name << "\n";
+    cout << average / n << name << endl;
   }
   return 0;
 }

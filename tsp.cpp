@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// globals
 vector<pair<double, double>> points;
 
 double dist(int i, int j) {
@@ -37,7 +36,7 @@ int main() {
     used[best] = true;
   }
   for (int i = 0; i < n; i++) {
-    cout << tour[i] << "\n";
+    cout << tour[i] << endl;
   }
   return 0;
 }

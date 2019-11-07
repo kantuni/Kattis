@@ -16,7 +16,7 @@ int main() {
   }
   for (int i = 0; i < 3; i++) {
     if (cups[i] == 1) {
-      cout << i + 1 << "\n";
+      cout << i + 1 << endl;
     }
   }
   return 0;

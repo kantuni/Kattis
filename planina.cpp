@@ -8,6 +8,6 @@ int main() {
   while (n--) {
     ans = 2 * ans - 1;
   }
-  cout << ans * ans << "\n";
+  cout << ans * ans << endl;
   return 0;
 }

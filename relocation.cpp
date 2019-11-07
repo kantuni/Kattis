@@ -19,7 +19,7 @@ int main() {
       int a, b;
       cin >> a >> b;
       int ans = abs(loc[a - 1] - loc[b - 1]);
-      cout << ans << "\n"; 
+      cout << ans << endl; 
     }
   }
   return 0;

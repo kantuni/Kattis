@@ -18,10 +18,10 @@ int main() {
       gis.push_back(asub[i]);
     }
   }
-  cout << gis.size() << "\n";
+  cout << gis.size() << endl;
   for (int g: gis) {
     cout << g << " ";
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }

@@ -13,9 +13,9 @@ int main() {
     bool c4 = 1.0 * a / b == c;
     bool c5 = 1.0 * b / a == c;
     if (c1 or c2 or c3 or c4 or c5) {
-      cout << "Possible" << "\n";
+      cout << "Possible" << endl;
     } else {
-      cout << "Impossible" << "\n";
+      cout << "Impossible" << endl;
     }
   }
   return 0;

@@ -24,7 +24,15 @@ int main() {
       y += string(1, b[i]);
     }
   }
-  cout << (x.size() == 0 ? "YODA" : to_string(stoi(x))) << "\n";
-  cout << (y.size() == 0 ? "YODA" : to_string(stoi(y))) << "\n";
+  if (x.size() == 0) {
+    cout << "YODA" << endl;
+  } else {
+    cout << to_string(stoi(x)) << endl;
+  }
+  if (y.size() == 0) {
+    cout << "YODA" << endl;
+  } else {
+    cout << to_string(stoi(y)) << endl;
+  }
   return 0;
 }

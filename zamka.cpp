@@ -3,7 +3,7 @@ using namespace std;
 
 int dsum(int n) {
   int sum = 0;
-  while (n) {
+  while (n > 0) {
     sum += n % 10;
     n /= 10;
   }
@@ -15,13 +15,13 @@ int main() {
   cin >> l >> d >> x;
   for (int n = l; n <= d; n++) {
     if (dsum(n) == x) {
-      cout << n << "\n";
+      cout << n << endl;
       break;
     }
   }
   for (int m = d; m >= l; m--) {
     if (dsum(m) == x) {
-      cout << m << "\n";
+      cout << m << endl;
       break;
     }
   }

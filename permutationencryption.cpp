@@ -8,9 +8,9 @@ int main() {
     if (n == 0) {
       break;
     }
-    vector<int> perm(n);
+    vector<int> p(n);
     for (int i = 0; i < n; i++) {
-      cin >> perm[i];
+      cin >> p[i];
     }
     cin.ignore();
     string m;
@@ -19,12 +19,12 @@ int main() {
       m += " ";
     }
     cout << "'";
-    for (int i = 0; m.size() and i < m.size() - n + 1; i += n) {
+    for (int i = 0; !m.empty() and i < m.size() - n + 1; i += n) {
       for (int j = 0; j < n; j++) {
-        cout << m[i + perm[j] - 1];
+        cout << m[i + p[j] - 1];
       }
     }
-    cout << "'\n";
+    cout << "'" << endl;
   }
   return 0;
 }

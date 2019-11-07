@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int n;
   cin >> n;
-  vector<int> d(365, 0);
+  vector<int> d(365);
   while (n--) {
     int s, t;
     cin >> s >> t;
@@ -16,6 +16,6 @@ int main() {
   for (int i = 0; i < d.size(); i++) {
     ans += d[i];
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }

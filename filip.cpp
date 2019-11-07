@@ -7,10 +7,10 @@ int main() {
   int ra = 0, rb = 0;
   for (int i = 0; i < 3; i++) {
     ra += (a % 10) * pow(10, 2 - i);
-    a /= 10;
     rb += (b % 10) * pow(10, 2 - i);
+    a /= 10;
     b /= 10;
   }
-  cout << max(ra, rb) << "\n";  
+  cout << max(ra, rb) << endl;  
   return 0;
 }

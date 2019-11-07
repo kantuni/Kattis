@@ -8,6 +8,6 @@ int main() {
     cin >> n;
     s.insert(n % 42);
   }
-  cout << s.size() << "\n";
+  cout << s.size() << endl;
   return 0;
 }

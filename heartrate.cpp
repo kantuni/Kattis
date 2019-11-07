@@ -11,7 +11,7 @@ int main() {
     double bpm = 60 * b / p;
     double diff = 60 / p;
     cout << fixed << setprecision(4);
-    cout << bpm - diff << " " << bpm << " " << bpm + diff << "\n";
+    cout << bpm - diff << " " << bpm << " " << bpm + diff << endl;
   }
   return 0;
 }

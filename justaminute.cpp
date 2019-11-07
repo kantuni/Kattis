@@ -11,12 +11,12 @@ int main() {
     num += s;
     denom += m * 60;
   }
-  double ans = 1. * num / denom;
+  double ans = 1.0 * num / denom;
   if (ans > 1) {
     cout << fixed << setprecision(8);
-    cout << ans << "\n";
+    cout << ans << endl;
   } else {
-    cout << "measurement error" << "\n";
+    cout << "measurement error" << endl;
   }
   return 0;
 }

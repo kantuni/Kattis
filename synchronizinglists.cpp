@@ -15,17 +15,17 @@ int main() {
     for (int i = 0; i < n; i++) {
       cin >> l2[i];
     }
-    vector<int> l1c(l1);
-    sort(l1c.begin(), l1c.end());
-    sort(l2.begin(), l2.end());
-    unordered_map<int, int> memo;
+    vector<int> l1s(l1), l2s(l2);
+    sort(l1s.begin(), l1s.end());
+    sort(l2s.begin(), l2s.end());
+    map<int, int> memo;
     for (int i = 0; i < n; i++) {
-      memo[l1c[i]] = l2[i];
+      memo[l1s[i]] = l2s[i];
     }
     for (int i = 0; i < n; i++) {
-      cout << memo[l1[i]] << "\n";
+      cout << memo[l1[i]] << endl;
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }

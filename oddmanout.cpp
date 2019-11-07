@@ -18,7 +18,7 @@ int main() {
       }
     }
     cout << "Case #" << i + 1 << ": ";
-    cout << *s.begin() << "\n";
+    cout << *s.begin() << endl;
   }
   return 0;
 }

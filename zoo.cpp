@@ -20,9 +20,9 @@ int main() {
       transform(animal.begin(), animal.end(), animal.begin(), ::tolower);
       memo[animal] += 1;
     }
-    cout << "List " << ln << ":" << "\n";
+    cout << "List " << ln << ":" << endl;
     for (auto m: memo) {
-      cout << m.first << " | " << m.second << "\n";
+      cout << m.first << " | " << m.second << endl;
     }
     ln++;
   }

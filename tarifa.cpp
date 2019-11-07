@@ -12,6 +12,6 @@ int main() {
     cin >> p;
     ans += x - p;
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }

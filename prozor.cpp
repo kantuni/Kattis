@@ -46,12 +46,12 @@ int main() {
       }
     }
   }
-  cout << mf << "\n";
+  cout << mf << endl;
   for (int i = 0; i < r; i++) {
     for (int j = 0; j < s; j++) {
       cout << w[i][j];
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }

@@ -10,9 +10,9 @@ int main() {
     n++;
   }
   if (s.size() == n) {
-    cout << "yes" << "\n";
+    cout << "yes" << endl;
   } else {
-    cout << "no" << "\n";
+    cout << "no" << endl;
   }
   return 0;
 }

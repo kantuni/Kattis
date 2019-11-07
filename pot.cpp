@@ -10,6 +10,6 @@ int main() {
     cin >> p;
     x += pow(p / 10, p % 10);
   }
-  cout << x << "\n";
+  cout << x << endl;
   return 0;
 }

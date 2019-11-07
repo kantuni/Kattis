@@ -13,6 +13,6 @@ int main() {
     cout << l;
     k += string(1, l);
   }
-  cout << "\n";
+  cout << endl;
   return 0;
 }

@@ -10,6 +10,6 @@ int main() {
     cin >> q >> y;
     ans += q * y;
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }

@@ -22,7 +22,7 @@ int main() {
       }
     }
     cout << "Case " << t++ << ": ";
-    cout << (in ? "IN" : "OUT") << "\n";
+    cout << (in ? "IN" : "OUT") << endl;
   }
   return 0;
 }

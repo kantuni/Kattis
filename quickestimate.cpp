@@ -7,7 +7,7 @@ int main() {
   while (n--) {
     string s;
     cin >> s;
-    cout << s.size() << "\n";
+    cout << s.size() << endl;
   }
   return 0;
 }
