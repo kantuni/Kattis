@@ -15,7 +15,7 @@ int main() {
       ans += v * (t - prev);
       prev = t;
     }
-    cout << ans << " miles" << "\n";
+    cout << ans << " miles" << endl;
   }
   return 0;
 }
