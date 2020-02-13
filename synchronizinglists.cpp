@@ -8,10 +8,11 @@ int main() {
     if (n == 0) {
       break;
     }
-    vector<int> l1(n), l2(n);
+    vector<int> l1(n);
     for (int i = 0; i < n; i++) {
       cin >> l1[i];
     }
+    vector<int> l2(n);
     for (int i = 0; i < n; i++) {
       cin >> l2[i];
     }
