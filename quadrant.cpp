@@ -14,6 +14,6 @@ int main() {
   } else if (x < 0 and y < 0) {
     q = 3;
   }
-  cout << q << "\n";
+  cout << q << endl;
   return 0;
 }
