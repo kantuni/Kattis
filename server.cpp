@@ -13,6 +13,6 @@ int main() {
     }
     total += t;
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
