@@ -48,7 +48,7 @@ int main() {
     for (int j = ymin; j <= ymax; j++) {
       cout << M[i][j];
     }
-    cout << "\n";
+    cout << endl;
   }
   return 0;
 }
