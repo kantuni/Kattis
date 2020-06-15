@@ -9,7 +9,7 @@ int main() {
   for (int i = 0; i < s.size(); i += 3) {
     string c = s.substr(i, 3);
     if (cards.count(c) > 0) {
-      cout << "GRESKA" << "\n";
+      cout << "GRESKA" << endl;
       return 0;
     }
     cards.insert(c);
@@ -18,6 +18,6 @@ int main() {
   cout << 13 - suits['P'] << " ";
   cout << 13 - suits['K'] << " ";
   cout << 13 - suits['H'] << " ";
-  cout << 13 - suits['T'] << "\n";
+  cout << 13 - suits['T'] << endl;
   return 0;
 }
