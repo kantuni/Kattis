@@ -12,6 +12,6 @@ int main() {
     ans += l * w;
   }
   cout << fixed << setprecision(7);
-  cout << ans * c << "\n";
+  cout << ans * c << endl;
   return 0;
 }
