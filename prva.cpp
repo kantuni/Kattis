@@ -38,6 +38,6 @@ int main() {
     }
   }
   sort(words.begin(), words.end());
-  cout << words[0] << "\n";
+  cout << words[0] << endl;
   return 0;
 }
