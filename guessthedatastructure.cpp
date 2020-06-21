@@ -35,17 +35,17 @@ int main() {
     }
     int cnt = c1 + c2 + c3;
     if (cnt == 0) {
-      cout << "impossible" << "\n";
+      cout << "impossible" << endl;
     } else if (cnt == 1) {
       if (c1) {
-        cout << "stack" << "\n";
+        cout << "stack" << endl;
       } else if (c2) {
-        cout << "queue" << "\n";
+        cout << "queue" << endl;
       } else {
-        cout << "priority queue" << "\n";
+        cout << "priority queue" << endl;
       }
     } else {
-      cout << "not sure" << "\n";
+      cout << "not sure" << endl;
     }
   }
   return 0;
