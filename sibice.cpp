@@ -8,9 +8,9 @@ int main() {
     int l;
     cin >> l;
     if (l * l <= w * w + h * h) {
-      cout << "DA" << "\n";
+      cout << "DA" << endl;
     } else {
-      cout << "NE" << "\n";
+      cout << "NE" << endl;
     }
   }
   return 0;
