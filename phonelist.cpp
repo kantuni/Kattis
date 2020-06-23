@@ -21,7 +21,11 @@ int main() {
         break;
       }
     }
-    cout << (ok ? "YES" : "NO") << "\n";
+    if (ok) {
+      cout << "YES" << endl;
+    } else {
+      cout << "NO" << endl;
+    }
   }
   return 0;
 }
