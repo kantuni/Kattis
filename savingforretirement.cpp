@@ -8,6 +8,6 @@ int main() {
   if ((x - a) * as <= (br - b) * bs) {
     x++;
   }
-  cout << x << "\n";
+  cout << x << endl;
   return 0;
 }
