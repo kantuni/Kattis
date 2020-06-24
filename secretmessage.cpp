@@ -17,13 +17,13 @@ int main() {
       m++;
     }
     int r = sqrt(m), c = sqrt(m);
-    vector<vector<char>> table(r, vector<char>(c));
+    char table[r][c];
     for (int i = 0; i < r; i++) {
       for (int j = 0; j < c; j++) {
         table[i][j] = s[i * r + j];
       }
     }
-    string sm = "";
+    string sm;
     for (int j = 0; j < c; j++) {
       for (int i = r - 1; i >= 0; i--) {
         if (table[i][j] != '*') {
@@ -31,7 +31,7 @@ int main() {
         }
       }
     }
-    cout << sm << "\n";
+    cout << sm << endl;
   }
   return 0;
 }
