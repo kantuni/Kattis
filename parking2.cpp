@@ -12,7 +12,7 @@ int main() {
       cin >> pos[i];
     }
     sort(pos.begin(), pos.end());
-    cout << 2 * (pos[n - 1] - pos[0]) << "\n";
+    cout << 2 * (pos[n - 1] - pos[0]) << endl;
   }
   return 0;
 }
