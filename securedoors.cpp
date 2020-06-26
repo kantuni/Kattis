@@ -15,11 +15,11 @@ int main() {
     cout << name;
     if (action == "entry") {
       cout << " entered";
-      cout << (inside[name] ? " (ANOMALY)" : "") << "\n";
+      cout << (inside[name] ? " (ANOMALY)" : "") << endl;
       inside[name] = true;
     } else {
       cout << " exited";
-      cout << (!inside[name] ? " (ANOMALY)" : "") << "\n";
+      cout << (!inside[name] ? " (ANOMALY)" : "") << endl;
       inside[name] = false;
     }
   }
