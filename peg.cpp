@@ -33,6 +33,6 @@ int main() {
       }
     }
   }
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
