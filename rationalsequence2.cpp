@@ -9,7 +9,7 @@ int main() {
     char c;
     cin >> k >> p >> c >> q;
     vector<char> path;
-    while (p != 1 || q != 1) {
+    while (p != 1 or q != 1) {
       if (p > q) {
         path.push_back('r');
         p -= q;
@@ -27,8 +27,8 @@ int main() {
         h -= (h - l) / 2;
       }
     }
-    int ans = pow(2, path.size()) + l;
-    cout << k << " " << ans << "\n";
+    int ans = l + pow(2, path.size());
+    cout << k << " " << ans << endl;
   }
   return 0;
 }
