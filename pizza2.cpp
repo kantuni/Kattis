@@ -6,6 +6,6 @@ int main() {
   cin >> r >> c;
   double ans = 100.0 * (r - c) * (r - c) / (r * r);
   cout << fixed << setprecision(6);
-  cout << ans << "\n";
+  cout << ans << endl;
   return 0;
 }
