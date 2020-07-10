@@ -18,7 +18,7 @@ int main() {
       }
     }
     if (counter == 26) {
-      cout << "pangram" << "\n";
+      cout << "pangram" << endl;
     } else {
       cout << "missing ";
       for (int i = 0; i < alphabet.size(); i++) {
@@ -26,7 +26,7 @@ int main() {
           cout << (char) (i + 'a');
         }
       }
-      cout << "\n";
+      cout << endl;
     }
   }
   return 0;
