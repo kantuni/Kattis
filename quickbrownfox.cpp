@@ -10,14 +10,14 @@ int main() {
     getline(cin, s);
     transform(s.begin(), s.end(), s.begin(), ::tolower);
     vector<int> alphabet(26, 0);
-    int counter = 0;
+    int cnt = 0;
     for (int i = 0; i < s.size(); i++) {
       if (isalpha(s[i]) and alphabet[s[i] - 'a'] == 0) {
         alphabet[s[i] - 'a'] = 1;
-        counter++;
+        cnt++;
       }
     }
-    if (counter == 26) {
+    if (cnt == 26) {
       cout << "pangram" << endl;
     } else {
       cout << "missing ";
