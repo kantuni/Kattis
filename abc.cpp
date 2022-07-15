@@ -18,6 +18,6 @@ int main() {
       cout << nums[2] << " ";
     }
   }
-  cout << endl;
+  cout << "\n";
   return 0;
 }
