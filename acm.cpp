@@ -32,9 +32,9 @@ int main() {
     memo[l] = p;
   }
   int solved = 0, total = 0;
-  for (auto kv: memo) {
-    if (kv.second.v) {
-      total += kv.second.m + (20 * kv.second.w);
+  for (auto [_, p]: memo) {
+    if (p.v) {
+      total += p.m + (20 * p.w);
       solved++;
     }
   }
