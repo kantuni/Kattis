@@ -38,6 +38,6 @@ int main() {
       solved++;
     }
   }
-  cout << solved << " " << total << endl;
+  cout << solved << " " << total << "\n";
   return 0;
 }
